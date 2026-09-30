@@ -10,6 +10,7 @@ num = dict(re.findall(r"\\newcommand\{\\(\w+)\}\{([^}]*)\}",
 tex = open(os.path.join(ROOT, "paper", "main.tex"), encoding="utf-8").read()
 title = re.search(r"\\title\{(.*?)\}\n", tex, re.S).group(1).replace("\\\\", " ").strip()
 ab = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", tex, re.S).group(1).strip()
+ab = re.sub(r"\\(?:emph|textit|textbf)\{([^}]*)\}", r"\1", ab)
 ab = re.sub(r"\\(\w+)(\{\})?", lambda m: num.get(m.group(1), m.group(0)), ab)
 for a, b in (("\\%", "%"), ("$\\times$", "x"), ("~", " "), ("---", "-"), ("--", "-"), ("$", "")):
     ab = ab.replace(a, b)
