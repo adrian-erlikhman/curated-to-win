@@ -1,0 +1,21 @@
+{'n': 25, 'p_top_kept': 0.4145, 'distinct_winners': 113, 'worst_winner_rank': 153, 'tau_top10_median': 0.3409971697352368, 'tau_top10_p10': -0.023281009858985943}
+{'n': 50, 'p_top_kept': 0.6645, 'distinct_winners': 64, 'worst_winner_rank': 125, 'tau_top10_median': 0.4283597360771242, 'tau_top10_p10': 0.09428090415820634}
+{'n': 100, 'p_top_kept': 0.868, 'distinct_winners': 18, 'worst_winner_rank': 37, 'tau_top10_median': 0.5111111111111111, 'tau_top10_p10': 0.24444444444444444}
+{'n': 200, 'p_top_kept': 0.9725, 'distinct_winners': 5, 'worst_winner_rank': 6, 'tau_top10_median': 0.6, 'tau_top10_p10': 0.3680349649825889}
+{'n': 500, 'p_top_kept': 0.998, 'distinct_winners': 2, 'worst_winner_rank': 2, 'tau_top10_median': 0.6888888888888888, 'tau_top10_p10': 0.5111111111111111}
+{'n': 1000, 'p_top_kept': 1.0, 'distinct_winners': 1, 'worst_winner_rank': 1, 'tau_top10_median': 0.7777777777777777, 'tau_top10_p10': 0.6444444444444444}
+only Factuality                  #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+without Factuality               #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+only Focus                       #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+without Focus                    #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+only Math                        #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+without Math                     #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+only Precise IF                  #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+without Precise IF               #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+only Safety                      #33  tied 1   HFXM/RAMO-Llama3.1-8B
+without Safety                   #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+subset Factuality                #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+subset Focus                     #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+subset Math                      #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+subset Precise IF                #1   tied 1   Skywork/Skywork-Reward-V2-Llama-3.1-8B
+subset Safety                    #33  tied 1   HFXM/RAMO-Llama3.1-8B

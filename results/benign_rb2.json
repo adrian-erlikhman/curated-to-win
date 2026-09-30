@@ -1,0 +1,146 @@
+{
+ "official_top": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+ "n_models": 188,
+ "random_sets": [
+  {
+   "n": 25,
+   "p_top_kept": 0.4145,
+   "distinct_winners": 113,
+   "worst_winner_rank": 153,
+   "tau_top10_median": 0.3409971697352368,
+   "tau_top10_p10": -0.023281009858985943
+  },
+  {
+   "n": 50,
+   "p_top_kept": 0.6645,
+   "distinct_winners": 64,
+   "worst_winner_rank": 125,
+   "tau_top10_median": 0.4283597360771242,
+   "tau_top10_p10": 0.09428090415820634
+  },
+  {
+   "n": 100,
+   "p_top_kept": 0.868,
+   "distinct_winners": 18,
+   "worst_winner_rank": 37,
+   "tau_top10_median": 0.5111111111111111,
+   "tau_top10_p10": 0.24444444444444444
+  },
+  {
+   "n": 200,
+   "p_top_kept": 0.9725,
+   "distinct_winners": 5,
+   "worst_winner_rank": 6,
+   "tau_top10_median": 0.6,
+   "tau_top10_p10": 0.3680349649825889
+  },
+  {
+   "n": 500,
+   "p_top_kept": 0.998,
+   "distinct_winners": 2,
+   "worst_winner_rank": 2,
+   "tau_top10_median": 0.6888888888888888,
+   "tau_top10_p10": 0.5111111111111111
+  },
+  {
+   "n": 1000,
+   "p_top_kept": 1.0,
+   "distinct_winners": 1,
+   "worst_winner_rank": 1,
+   "tau_top10_median": 0.7777777777777777,
+   "tau_top10_p10": 0.6444444444444444
+  }
+ ],
+ "natural": {
+  "only Factuality": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.8473118279569873,
+   "n_tied": 1
+  },
+  "without Factuality": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.8472403336645159,
+   "n_tied": 1
+  },
+  "only Focus": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.9838383838383868,
+   "n_tied": 1
+  },
+  "without Focus": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.813108694694166,
+   "n_tied": 1
+  },
+  "only Math": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.775956284153006,
+   "n_tied": 1
+  },
+  "without Math": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.865079219615512,
+   "n_tied": 1
+  },
+  "only Precise IF": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.6625000000000003,
+   "n_tied": 1
+  },
+  "without Precise IF": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.893443290653764,
+   "n_tied": 1
+  },
+  "only Safety": {
+   "winner": "HFXM/RAMO-Llama3.1-8B",
+   "official_rank": 33,
+   "score": 0.9755555555555527,
+   "n_tied": 1
+  },
+  "without Safety": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.8174016239870954,
+   "n_tied": 1
+  },
+  "subset Factuality": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.8473118279569873,
+   "n_tied": 1
+  },
+  "subset Focus": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.9838383838383868,
+   "n_tied": 1
+  },
+  "subset Math": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.775956284153006,
+   "n_tied": 1
+  },
+  "subset Precise IF": {
+   "winner": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+   "official_rank": 1,
+   "score": 0.6625000000000003,
+   "n_tied": 1
+  },
+  "subset Safety": {
+   "winner": "HFXM/RAMO-Llama3.1-8B",
+   "official_rank": 33,
+   "score": 0.9755555555555527,
+   "n_tied": 1
+  }
+ }
+}

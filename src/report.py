@@ -128,7 +128,7 @@ def main():
     open(os.path.join(PAPER, "table_benign.tex"), "w").write("\n".join(tex) + "\n")
 
     # figure: removal needed vs score gap, both benchmarks
-    fig, axes = plt.subplots(1, len(figs), figsize=(3.3 * len(figs), 2.6),
+    fig, axes = plt.subplots(1, len(figs), figsize=(3.4 * len(figs), 2.5),
                              squeeze=False)
     for ax, (tag, s) in zip(axes[0], figs.items()):
         g = np.array(s["free"]["gaps"]) * 100
@@ -141,13 +141,13 @@ def main():
         ax.scatter(gs, cs, s=9, color="#C1543A", label="section-preserving",
                    alpha=0.8, lw=0)
         ax.scatter(g, c, s=9, color="#1F3A5F", label="unconstrained", lw=0)
-        ax.set_xlabel("score gap to the leader (points)", fontsize=8)
-        ax.set_ylabel("share removed to crown (%)", fontsize=8)
-        ax.set_title("RewardBench" + (" 2" if tag else ""), fontsize=9)
-        ax.tick_params(labelsize=7)
+        ax.set_xlabel("score gap to the leader (points)", fontsize=9)
+        ax.set_ylabel("share removed to crown (%)", fontsize=9)
+        ax.set_title("RewardBench" + (" 2" if tag else ""), fontsize=10)
+        ax.tick_params(labelsize=8)
         ax.set_xlim(0, lim)
         ax.set_ylim(0, None)
-    axes[0][0].legend(fontsize=6.5, frameon=False, loc="upper left")
+    axes[0][0].legend(fontsize=8, frameon=False, loc="upper left")
     fig.tight_layout()
     fig.savefig(os.path.join(PAPER, "fig_cost.pdf"))
     print(open(os.path.join(PAPER, "numbers.tex")).read())

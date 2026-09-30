@@ -49,3 +49,70 @@
  49 Ray2333/reward-model-Mistral-7B-instruct-Unified-Feedba 0.769  free 0.818  strat 0.648
  50 0-hero/Matter-0.1-7B-boost-DPO-preview                  0.768  free 0.817  strat 0.748
  51 Ahjeong/MMPO_Gemma_7b                                   0.768  free 0.817  strat 0.751
+ 52 allenai/tulu-2-dpo-13b                                  0.767  free 0.816  strat 0.734
+ 53 HuggingFaceH4/zephyr-7b-alpha                           0.765  free 0.813  strat 0.763
+ 54 allenai/tulu-v2.5-70b-uf-rm                             0.760  free 0.809  strat 0.781
+ 55 jondurbin/bagel-dpo-34b-v0.5                            0.756  free 0.805  strat 0.688
+ 56 allenai/llama-3-tulu-2-dpo-8b                           0.755  free 0.803  strat 0.674
+ 57 HuggingFaceH4/starchat2-15b-v0.1                        0.755  free 0.803  strat 0.702
+ 58 HuggingFaceH4/zephyr-7b-beta                            0.754  free 0.803  strat 0.734
+ 59 allenai/tulu-2-dpo-7b                                   0.752  free 0.801  strat 0.718
+ 60 Ray2333/GRM-Gemma-2B-sftreg                             0.751  free 0.800  strat 0.626
+ 61 0-hero/Matter-0.1-7B-DPO-preview                        0.748  free 0.797  strat 0.699
+ 62 allenai/llama-3-tulu-2-8b-uf-mean-rm                    0.745  free 0.794  strat 0.695
+ 63 prometheus-eval/prometheus-8x7b-v2.0                    0.745  free 0.794  strat 0.606
+ 64 stabilityai/stablelm-zephyr-3b                          0.740  free 0.789  strat 0.753
+ 65 NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO             0.737  free 0.786  strat 0.687
+ 66 opencompass/CompassJudger-1-1.5B-Instruct               0.734  free 0.783  strat 0.628
+ 67 Ray2333/Gemma-2B-rewardmodel-baseline                   0.734  free 0.783  strat 0.613
+ 68 Qwen/Qwen1.5-14B-Chat                                   0.721  free 0.770  strat 0.717
+ 69 berkeley-nest/Starling-RM-7B-alpha                      0.715  free 0.764  strat 0.594
+ 70 allenai/llama-3-tulu-2-70b-uf-mean-rm                   0.715  free 0.764  strat 0.673
+ 71 openbmb/Eurus-7b-kto                                    0.710  free 0.759  strat 0.665
+ 72 RLHFlow/LLaMA3-iterative-DPO-final                      0.708  free 0.757  strat 0.684
+ 73 Qwen/Qwen1.5-7B-Chat                                    0.706  free 0.754  strat 0.690
+ 74 Qwen/Qwen1.5-72B-Chat                                   0.704  free 0.752  strat 0.717
+ 75 HuggingFaceH4/zephyr-7b-gemma-v0.1                      0.696  free 0.744  strat 0.631
+ 76 weqweasdas/RM-Gemma-7B                                  0.695  free 0.744  strat 0.631
+ 77 openbmb/MiniCPM-2B-dpo-fp32                             0.695  free 0.744  strat 0.628
+ 78 OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5        0.695  free 0.743  strat 0.625
+ 79 allenai/OLMo-7B-Instruct                                0.692  free 0.741  strat 0.630
+ 80 weqweasdas/RM-Gemma-7B-4096                             0.691  free 0.740  strat 0.620
+ 81 Qwen/Qwen1.5-MoE-A2.7B-Chat                             0.691  free 0.739  strat 0.714
+ 82 openbmb/UltraRM-13b                                     0.685  free 0.734  strat 0.654
+ 83 stabilityai/stablelm-2-zephyr-1_6b                      0.679  free 0.727  strat 0.626
+ 84 RLHFlow/RewardModel-Mistral-7B-for-DPA-v1               0.670  free 0.719  strat 0.623
+ 85 allenai/tulu-v2.5-70b-preference-mix-rm                 0.657  free 0.706  strat 0.501
+ 86 meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo             0.657  free 0.620  strat 0.570
+ 87 weqweasdas/RM-Gemma-2B                                  0.654  free 0.702  strat 0.544
+ 88 wenbopan/Faro-Yi-9B-DPO                                 0.647  free 0.696  strat 0.619
+ 89 stabilityai/stable-code-instruct-3b                     0.643  free 0.692  strat 0.666
+ 90 PKU-Alignment/beaver-7b-v2.0-reward                     0.639  free 0.688  strat 0.496
+ 91 IDEA-CCNL/Ziya-LLaMA-7B-Reward                          0.637  free 0.685  strat 0.593
+ 92 OpenAssistant/reward-model-deberta-v3-large-v2          0.616  free 0.665  strat 0.452
+ 93 Qwen/Qwen1.5-1.8B-Chat                                  0.607  free 0.656  strat 0.599
+ 94 OpenAssistant/oasst-rm-2-pythia-6.9b-epoch-1            0.607  free 0.655  strat 0.509
+ 95 PKU-Alignment/beaver-7b-v2.0-cost                       0.603  free 0.652  strat 0.602
+ 96 ContextualAI/archangel_sft-kto_llama13b                 0.598  free 0.647  strat 0.514
+ 97 ContextualAI/archangel_sft-kto_llama30b                 0.591  free 0.639  strat 0.529
+ 98 PKU-Alignment/beaver-7b-v1.0-cost                       0.581  free 0.630  strat 0.566
+ 99 ContextualAI/archangel_sft-dpo_llama30b                 0.561  free 0.609  strat 0.533
+100 Qwen/Qwen1.5-4B-Chat                                    0.560  free 0.609  strat 0.520
+101 ContextualAI/archangel_sft-kto_pythia1-4b               0.559  free 0.607  strat 0.522
+102 ContextualAI/archangel_sft-kto_pythia6-9b               0.554  free 0.603  strat 0.506
+103 ContextualAI/archangel_sft-kto_pythia2-8b               0.549  free 0.597  strat 0.474
+104 Qwen/Qwen1.5-0.5B-Chat                                  0.538  free 0.587  strat 0.490
+105 ContextualAI/archangel_sft-dpo_llama13b                 0.537  free 0.586  strat 0.503
+106 ContextualAI/archangel_sft-kto_llama7b                  0.536  free 0.585  strat 0.533
+107 ContextualAI/archangel_sft-dpo_llama7b                  0.527  free 0.576  strat 0.568
+108 my_model/                                               0.527  free 0.576  strat 0.515
+109 ContextualAI/archangel_sft-dpo_pythia2-8b               0.526  free 0.575  strat 0.464
+110 ContextualAI/archangel_sft-dpo_pythia6-9b               0.523  free 0.572  strat 0.478
+111 ContextualAI/archangel_sft-dpo_pythia1-4b               0.521  free 0.570  strat 0.512
+112 google/gemini-1.5-pro-exp-0801                          0.515  free 0.129  strat 0.116
+113 SultanR/SmolTulu-1.7b-RM                                0.509  free 0.558  strat 0.370
+114 ContextualAI/archangel_sft-kto_pythia12-0b              0.500  free 0.548  strat 0.460
+115 ContextualAI/archangel_sft-dpo_pythia12-0b              0.497  free 0.546  strat 0.464
+116 weqweasdas/hh_rlhf_rm_open_llama_3b                     0.484  free 0.532  strat 0.393
+117 allenai/tulu-v2.5-13b-uf-rm                             0.462  free 0.510  strat 0.483
+118 PKU-Alignment/beaver-7b-v1.0-reward                     0.457  free 0.506  strat 0.387

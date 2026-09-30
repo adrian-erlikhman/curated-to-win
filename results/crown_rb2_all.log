@@ -1,0 +1,188 @@
+  1 Skywork/Skywork-Reward-V2-Llama-3.1-8B                  0.847  free 1.000  strat 1.000
+  2 Skywork/Skywork-Reward-V2-Qwen3-8B                      0.795  free 0.947  strat 0.935
+  3 Skywork/Skywork-Reward-V2-Qwen3-4B                      0.772  free 0.924  strat 0.901
+  4 Skywork/Skywork-Reward-V2-Llama-3.2-3B                  0.761  free 0.914  strat 0.881
+  5 anthropic/claude-opus-4-20250514                        0.751  free 0.901  strat 0.884
+  6 anthropic/claude-3-7-sonnet-20250219                    0.751  free 0.903  strat 0.898
+  7 infly/INF-ORM-Llama3.1-70B                              0.746  free 0.898  strat 0.870
+  8 allenai/open_instruct_dev-rm_llama_1e-6_2_skyworkstuluf 0.737  free 0.889  strat 0.843
+  9 allenai/open_instruct_dev-rm_llama70b_3e-6_skyworkstulu 0.736  free 0.888  strat 0.884
+ 10 LxzGordon/URM-LLaMa-3.1-8B                              0.735  free 0.887  strat 0.840
+ 11 allenai/open_instruct_dev-rm_llama70b_skyworkstulufull_ 0.733  free 0.885  strat 0.881
+ 12 Skywork/Skywork-Reward-Llama-3.1-8B                     0.730  free 0.882  strat 0.832
+ 13 allenai/open_instruct_dev-rm_llama_3e-6_1_skyworkstuluf 0.721  free 0.873  strat 0.845
+ 14 Skywork/Skywork-Reward-V2-Qwen3-1.7B                    0.719  free 0.872  strat 0.837
+ 15 Skywork/Skywork-Reward-Llama-3.1-8B-v0.2                0.718  free 0.870  strat 0.817
+ 16 allenai/open_instruct_dev-rm_llama_4e-6_1_skyworkstuluf 0.718  free 0.870  strat 0.844
+ 17 allenai/open_instruct_dev-rm_llama_3e-6_2_skyworkstuluf 0.717  free 0.870  strat 0.829
+ 18 allenai/open_instruct_dev-rm_llama_2e-6_1_skyworkstuluf 0.715  free 0.868  strat 0.828
+ 19 allenai/open_instruct_dev-rm_llama_3e-6_1_skyworkstuluf 0.714  free 0.866  strat 0.817
+ 20 allenai/open_instruct_dev-rm_llama_3e-6_1_skyworkstuluf 0.710  free 0.862  strat 0.835
+ 21 nicolinho/QRM-Llama3.1-8B-v2                            0.704  free 0.857  strat 0.808
+ 22 allenai/open_instruct_dev-rm_qwen32b_3e-6_skyworkstuluf 0.703  free 0.856  strat 0.855
+ 23 allenai/open_instruct_dev-rm_llama_3e-6_1_skyworks__1__ 0.703  free 0.856  strat 0.798
+ 24 allenai/open_instruct_dev-rm_tulu3_70b_1_skyworkstulufu 0.701  free 0.853  strat 0.834
+ 25 allenai/open_instruct_dev-rm_qwen32b_1e-6_skyworkstuluf 0.701  free 0.853  strat 0.852
+ 26 allenai/open_instruct_dev-rm_1e-6_2_rl_skyworkstulufull 0.699  free 0.852  strat 0.832
+ 27 allenai/open_instruct_dev-rm_llama_1e-6_1_skyworkstuluf 0.698  free 0.850  strat 0.824
+ 28 openai/gpt-4.1-2025-04-14                               0.697  free 0.831  strat 0.810
+ 29 allenai/open_instruct_dev-rm_3e-6_2_skyworkstulufull__1 0.697  free 0.849  strat 0.806
+ 30 allenai/open_instruct_dev-rm_llama70b_skyworkstulufull_ 0.697  free 0.850  strat 0.842
+ 31 allenai/open_instruct_dev-rm_1e-6_2_dpo_skyworkstuluful 0.697  free 0.850  strat 0.834
+ 32 anthropic/claude-sonnet-4-20250514                      0.695  free 0.808  strat 0.781
+ 33 HFXM/RAMO-Llama3.1-8B                                   0.695  free 0.847  strat 0.780
+ 34 allenai/open_instruct_dev-rm_3e-6_2_dpo_skyworkstuluful 0.694  free 0.847  strat 0.817
+ 35 allenai/open_instruct_dev-rm_llama_3e-6_1__2__174431139 0.694  free 0.846  strat 0.834
+ 36 allenai/open_instruct_dev-reward_modeling__1__174129291 0.693  free 0.845  strat 0.802
+ 37 Qwen/WorldPM-72B                                        0.689  free 0.842  strat 0.807
+ 38 allenai/open_instruct_dev-rm_qwen_3e-6_1_skyworkstulufu 0.687  free 0.839  strat 0.837
+ 39 allenai/open_instruct_dev-reward_modeling__1__174128736 0.686  free 0.839  strat 0.784
+ 40 Skywork/Skywork-Reward-V2-Llama-3.2-1B                  0.686  free 0.838  strat 0.795
+ 41 allenai/open_instruct_dev-rm_3e-6_1_skyworkstulufull__2 0.685  free 0.837  strat 0.832
+ 42 allenai/open_instruct_dev-rm_3e-6_1_dpo_skyworkstuluful 0.685  free 0.838  strat 0.826
+ 43 allenai/open_instruct_dev-rm_3e-6_1_rl_skyworkstulufull 0.684  free 0.837  strat 0.822
+ 44 allenai/open_instruct_dev-rm_3e-6_2_rl_skyworkstulufull 0.683  free 0.835  strat 0.805
+ 45 allenai/open_instruct_dev-rm_llama_3e-6_2__1__174389648 0.682  free 0.834  strat 0.821
+ 46 allenai/open_instruct_dev-rm_3e-6_1_dpo_skyworks__1__17 0.681  free 0.832  strat 0.782
+ 47 allenai/open_instruct_dev-reward_modeling__1__174128681 0.680  free 0.833  strat 0.801
+ 48 allenai/open_instruct_dev-rm_3e-6_1_skyworkstulufull__1 0.680  free 0.832  strat 0.822
+ 49 allenai/open_instruct_dev-rm_qwenbase_2e-5_1_skyworkstu 0.676  free 0.829  strat 0.825
+ 50 Ray2333/GRM-Llama3-8B-rewardmodel-ft                    0.675  free 0.827  strat 0.767
+ 51 Skywork/Skywork-VL-Reward-7B                            0.675  free 0.827  strat 0.775
+ 52 allenai/open_instruct_dev-rm_llama_1e-6_1_skyworks__1__ 0.672  free 0.825  strat 0.771
+ 53 allenai/open_instruct_dev-rm_qwen_2e-5_1_skyworkstulufu 0.672  free 0.824  strat 0.812
+ 54 allenai/open_instruct_dev-rm_llamabase_3e-6_2_skyworkst 0.671  free 0.824  strat 0.804
+ 55 allenai/open_instruct_dev-rm_llama_1e-6_2__1__174389663 0.670  free 0.822  strat 0.802
+ 56 allenai/open_instruct_dev-rm_llama_3e-6_1__3__174431149 0.670  free 0.822  strat 0.812
+ 57 allenai/open_instruct_dev-rm_tulu3_70b_2__8__1742982964 0.669  free 0.822  strat 0.790
+ 58 allenai/open_instruct_dev-rm_qwenbase_3e-6_2_skyworkstu 0.668  free 0.821  strat 0.789
+ 59 Skywork/Skywork-Reward-V2-Qwen3-0.6B                    0.667  free 0.820  strat 0.788
+ 60 allenai/open_instruct_dev-reward_modeling__1__174233814 0.666  free 0.818  strat 0.783
+ 61 allenai/open_instruct_dev-rm_3e-6_1_rl_skyworks__1__174 0.665  free 0.818  strat 0.770
+ 62 allenai/open_instruct_dev-rm_3e-6_1_skyworkstulufull__3 0.665  free 0.818  strat 0.806
+ 63 allenai/open_instruct_dev-rm_qwen_3e-6_1_skyworks__2__1 0.663  free 0.815  strat 0.767
+ 64 allenai/open_instruct_dev-rm_1e-6_1_dpo_skyworkstuluful 0.662  free 0.815  strat 0.807
+ 65 allenai/open_instruct_dev-rm_llama_2e-5_1_skyworkstuluf 0.662  free 0.814  strat 0.798
+ 66 allenai/open_instruct_dev-rm_llama_1e-6_1__1__174389662 0.660  free 0.812  strat 0.800
+ 67 allenai/open_instruct_dev-rm_qwen_3e-6_1_skyworks__1__1 0.658  free 0.811  strat 0.767
+ 68 allenai/open_instruct_dev-rm_1e-6_1_rl_skyworkstulufull 0.657  free 0.809  strat 0.801
+ 69 allenai/open_instruct_dev-rm_qwenbase_3e-6_1_skyworkstu 0.655  free 0.807  strat 0.798
+ 70 allenai/open_instruct_dev-rm_llama_3e-6_1__1__174392942 0.652  free 0.804  strat 0.783
+ 71 allenai/open_instruct_dev-rm_qwenbase_2e-5_2_skyworkstu 0.650  free 0.803  strat 0.790
+ 72 allenai/open_instruct_dev-rm_1e-6_2_5pctflipped__1__174 0.650  free 0.801  strat 0.790
+ 73 allenai/open_instruct_dev-reward_modeling__1__173992589 0.649  free 0.802  strat 0.784
+ 74 allenai/open_instruct_dev-rm_tulu3_70b_1__8__1742924455 0.648  free 0.801  strat 0.752
+ 75 allenai/open_instruct_dev-rm_3e-6_2_rl__1__1743551509   0.647  free 0.799  strat 0.783
+ 76 allenai/open_instruct_dev-rm_llama_2e-5_2_skyworkstuluf 0.646  free 0.798  strat 0.775
+ 77 allenai/open_instruct_dev-reward_modeling__1__174251961 0.646  free 0.798  strat 0.780
+ 78 allenai/open_instruct_dev-rm_3e-6_2_dpo__1__1743550180  0.645  free 0.798  strat 0.776
+ 79 allenai/open_instruct_dev-reward_modeling__1__174012928 0.643  free 0.795  strat 0.783
+ 80 allenai/open_instruct_dev-rm_1e-6_2_10pctflipped__1__17 0.642  free 0.794  strat 0.782
+ 81 NCSOFT/Llama-3-OffsetBias-RM-8B                         0.641  free 0.794  strat 0.752
+ 82 allenai/open_instruct_dev-rm_llamabase_1e-6_2_skyworkst 0.641  free 0.793  strat 0.770
+ 83 allenai/open_instruct_dev-rm_qwen_3e-6_2__1__1743023576 0.640  free 0.792  strat 0.791
+ 84 allenai/open_instruct_dev-rm_qwen_1e-6_1_skyworkstulufu 0.639  free 0.791  strat 0.775
+ 85 allenai/open_instruct_dev-rm_3e-6_1_dpo__1__1743549903  0.638  free 0.790  strat 0.777
+ 86 allenai/open_instruct_dev-rm_3e-6_1_10pctflipped__1__17 0.637  free 0.789  strat 0.785
+ 87 allenai/open_instruct_dev-rm_3e-6_2_1pctflipped__1__174 0.634  free 0.787  strat 0.766
+ 88 allenai/open_instruct_dev-rm_3e-6_1_rl__1__1743551527   0.633  free 0.785  strat 0.759
+ 89 allenai/open_instruct_dev-rm_3e-6_1__2__1743897475      0.633  free 0.786  strat 0.759
+ 90 allenai/open_instruct_dev-reward_modeling__1__173987106 0.631  free 0.783  strat 0.764
+ 91 allenai/open_instruct_dev-reward_modeling__1__174000507 0.631  free 0.783  strat 0.771
+ 92 allenai/open_instruct_dev-rm_qwenbase_1e-6_2_skyworkstu 0.631  free 0.783  strat 0.759
+ 93 allenai/open_instruct_dev-rm_qwen_3e-6_3__1__1743023619 0.630  free 0.783  strat 0.775
+ 94 allenai/open_instruct_dev-rm_3e-6_1_5pctflipped__1__174 0.628  free 0.781  strat 0.758
+ 95 allenai/open_instruct_dev-rm_1e-6_2_dpo__1__1743549325  0.627  free 0.779  strat 0.758
+ 96 allenai/open_instruct_dev-reward_modeling__1__173995770 0.627  free 0.779  strat 0.768
+ 97 allenai/open_instruct_dev-rm_3e-6_2_5pctflipped__1__174 0.626  free 0.778  strat 0.773
+ 98 allenai/open_instruct_dev-rm_1e-6_2_rl__1__1743551238   0.625  free 0.778  strat 0.755
+ 99 allenai/open_instruct_dev-rm_llamabase_3e-6_1_skyworkst 0.624  free 0.776  strat 0.765
+100 google/gemini-2.5-pro-preview-05-06                     0.623  free 0.744  strat 0.722
+101 allenai/open_instruct_dev-reward_modeling__1__173999876 0.623  free 0.775  strat 0.739
+102 sfairXC/FsfairX-LLaMA3-RM-v0.1                          0.622  free 0.774  strat 0.769
+103 allenai/open_instruct_dev-rm_3e-6_1_1pctflipped__1__174 0.622  free 0.775  strat 0.745
+104 allenai/open_instruct_dev-rm_3e-6_1_no_if__2__174431601 0.622  free 0.773  strat 0.759
+105 Ray2333/GRM-gemma2-2B-rewardmodel-ft                    0.620  free 0.772  strat 0.727
+106 allenai/open_instruct_dev-reward_modeling__1__173994388 0.619  free 0.771  strat 0.738
+107 allenai/open_instruct_dev-rm_3e-6_1__3__1744311421      0.619  free 0.771  strat 0.732
+108 allenai/open_instruct_dev-rm_3e-6_2_skyworkstulumix__1_ 0.618  free 0.770  strat 0.744
+109 openai/gpt-4o-2024-08-06                                0.618  free 0.702  strat 0.667
+110 allenai/open_instruct_dev-rm_1e-6_1_dpo_skyworks__1__17 0.618  free 0.771  strat 0.735
+111 allenai/open_instruct_dev-reward_modeling__1__173959099 0.617  free 0.769  strat 0.739
+112 allenai/open_instruct_dev-rm_3e-6_1_no_if__3__174431576 0.617  free 0.768  strat 0.734
+113 allenai/open_instruct_dev-rm_1e-6_2_20pctflipped__1__17 0.615  free 0.767  strat 0.765
+114 allenai/open_instruct_dev-rm_qwen_1e-6_1_skyworks__1__1 0.613  free 0.765  strat 0.735
+115 Ray2333/GRM-llama3-8B-sftreg                            0.611  free 0.764  strat 0.750
+116 allenai/open_instruct_dev-rm_3e-6_1_20pctflipped__1__17 0.611  free 0.763  strat 0.753
+117 allenai/open_instruct_dev-rm_1e-6_1_rl_skyworks__1__174 0.610  free 0.762  strat 0.713
+118 allenai/open_instruct_dev-rm_3e-6_2_skyworkstulu75__1__ 0.609  free 0.762  strat 0.710
+119 allenai/open_instruct_dev-rm_3e-6_1_skyworkstulu75__1__ 0.608  free 0.761  strat 0.725
+120 allenai/open_instruct_dev-rm_3e-6_2_10pctflipped__1__17 0.608  free 0.760  strat 0.745
+121 allenai/open_instruct_dev-rm_llamabase_2e-5_1_skyworkst 0.605  free 0.758  strat 0.736
+122 allenai/open_instruct_dev-rm_1e-6_1_rl__1__1743551221   0.604  free 0.756  strat 0.729
+123 allenai/Llama-3.1-Tulu-3-8B-RM                          0.604  free 0.756  strat 0.703
+124 allenai/open_instruct_dev-rm_1e-6_1_dpo__1__1743550054  0.599  free 0.751  strat 0.724
+125 google/gemini-2.5-flash-preview-04-17                   0.598  free 0.717  strat 0.681
+126 allenai/open_instruct_dev-rm_qwen_1e-6_1_skyworks__2__1 0.597  free 0.749  strat 0.727
+127 allenai/open_instruct_dev-rm_llamabase_2e-5_2_skyworkst 0.596  free 0.749  strat 0.740
+128 allenai/open_instruct_dev-reward_modeling__1__173997150 0.595  free 0.747  strat 0.718
+129 allenai/open_instruct_dev-rm_1e-6_1_5pctflipped__1__174 0.594  free 0.747  strat 0.720
+130 allenai/open_instruct_dev-rm_3e-6_1_skyworkstulumix__1_ 0.594  free 0.746  strat 0.701
+131 Ray2333/GRM-llama3-8B-distill                           0.592  free 0.745  strat 0.742
+132 weqweasdas/RM-Mistral-7B                                0.589  free 0.741  strat 0.742
+133 allenai/open_instruct_dev-reward_modeling__1__173997152 0.587  free 0.740  strat 0.729
+134 allenai/open_instruct_dev-rm_1e-6_2_skyworkstulumix__1_ 0.585  free 0.738  strat 0.695
+135 allenai/open_instruct_dev-rm_1e-6_1_10pctflipped__1__17 0.585  free 0.737  strat 0.709
+136 hendrydong/Mistral-RM-for-RAFT-GSHF-v0                  0.582  free 0.734  strat 0.730
+137 allenai/open_instruct_dev-rm_2e-5_1_5pctflipped__1__174 0.582  free 0.734  strat 0.700
+138 allenai/open_instruct_dev-rm_2e-5_1_10pctflipped__1__17 0.579  free 0.731  strat 0.715
+139 openai/gpt-4.1-mini-2025-04-14                          0.578  free 0.636  strat 0.625
+140 openbmb/Eurus-RM-7b                                     0.577  free 0.730  strat 0.722
+141 allenai/open_instruct_dev-rm_qwenbase_1e-6_1_skyworkstu 0.571  free 0.724  strat 0.708
+142 nicolinho/QRM-Gemma-2-27B                               0.569  free 0.721  strat 0.689
+143 allenai/open_instruct_dev-reward_modeling__1__174251962 0.568  free 0.720  strat 0.667
+144 internlm/internlm2-20b-reward                           0.565  free 0.717  strat 0.708
+145 allenai/open_instruct_dev-reward_modeling__1__173994397 0.563  free 0.715  strat 0.712
+146 allenai/open_instruct_dev-rm_llamabase_1e-6_1_skyworkst 0.562  free 0.714  strat 0.666
+147 allenai/open_instruct_dev-rm_3e-6_2_20pctflipped__1__17 0.560  free 0.713  strat 0.703
+148 CIR-AMS/BTRM_Qwen2_7b_0613                              0.558  free 0.710  strat 0.685
+149 allenai/open_instruct_dev-rm_3e-6_1_30pctflipped__1__17 0.556  free 0.708  strat 0.649
+150 allenai/open_instruct_dev-rm_1e-6_2_30pctflipped__1__17 0.551  free 0.703  strat 0.656
+151 allenai/open_instruct_dev-rm_1e-6_1_20pctflipped__1__17 0.548  free 0.700  strat 0.659
+152 allenai/open_instruct_dev-rm_2e-5_1_skyworkstulumix__1_ 0.547  free 0.699  strat 0.665
+153 allenai/open_instruct_dev-rm_2e-5_1_20pctflipped__1__17 0.545  free 0.698  strat 0.688
+154 allenai/open_instruct_dev-rm_1e-6_1_skyworkstulumix__1_ 0.543  free 0.696  strat 0.646
+155 internlm/internlm2-7b-reward                            0.536  free 0.688  strat 0.670
+156 allenai/open_instruct_dev-reward_modeling__1__173994385 0.535  free 0.688  strat 0.688
+157 Nexusflow/Starling-RM-34B                               0.525  free 0.678  strat 0.610
+158 openai/gpt-4o-mini-2024-07-18                           0.521  free 0.572  strat 0.515
+159 allenai/open_instruct_dev-rm_2e-5_2_skyworkstulumix__1_ 0.521  free 0.673  strat 0.622
+160 allenai/open_instruct_dev-rm_2e-5_2_5pctflipped__1__174 0.512  free 0.665  strat 0.649
+161 allenai/open_instruct_dev-rm_1e-6_1_30pctflipped__1__17 0.504  free 0.656  strat 0.507
+162 openbmb/UltraRM-13b                                     0.500  free 0.652  strat 0.639
+163 weqweasdas/RM-Gemma-7B                                  0.495  free 0.648  strat 0.622
+164 allenai/open_instruct_dev-rm_2e-5_2_10pctflipped__1__17 0.492  free 0.645  strat 0.644
+165 allenai/open_instruct_dev-rm_2e-5_2_20pctflipped__1__17 0.492  free 0.644  strat 0.637
+166 openai/gpt-4.1-nano-2025-04-14                          0.482  free 0.544  strat 0.508
+167 allenai/open_instruct_dev-rm_3e-6_2_30pctflipped__1__17 0.471  free 0.622  strat 0.605
+168 anthropic/claude-3-5-sonnet-20240620                    0.468  free 0.496  strat 0.401
+169 allenai/open_instruct_dev-rm_2e-5_1_30pctflipped__1__17 0.462  free 0.615  strat 0.544
+170 anthropic/claude-3-opus-20240229                        0.461  free 0.527  strat 0.461
+171 internlm/internlm2-1_8b-reward                          0.429  free 0.581  strat 0.552
+172 ShikaiChen/LDL-Reward-Gemma-2-27B-v0.1                  0.418  free 0.570  strat 0.553
+173 PKU-Alignment/beaver-7b-v1.0-cost                       0.402  free 0.554  strat 0.469
+174 PKU-Alignment/beaver-7b-v2.0-cost                       0.400  free 0.552  strat 0.490
+175 google/gemini-1.5-flash-8b                              0.391  free 0.389  strat 0.339
+176 allenai/open_instruct_dev-rm_2e-5_2_30pctflipped__1__17 0.370  free 0.522  strat 0.503
+177 OpenAssistant/reward-model-deberta-v3-large-v2          0.361  free 0.513  strat 0.433
+178 weqweasdas/RM-Gemma-2B                                  0.330  free 0.482  strat 0.391
+179 OpenAssistant/oasst-rm-2.1-pythia-1.4b-epoch-2.5        0.314  free 0.467  strat 0.400
+180 OpenAssistant/oasst-rm-2-pythia-6.9b-epoch-1            0.310  free 0.462  strat 0.342
+181 anthropic/claude-3-haiku-20240307                       0.306  free 0.365  strat 0.328
+182 weqweasdas/hh_rlhf_rm_open_llama_3b                     0.293  free 0.446  strat 0.356
+183 PKU-Alignment/beaver-7b-v2.0-reward                     0.285  free 0.437  strat 0.366
+184 allenai/open_instruct_dev-rm_1e-6_1_50pctflipped__1__17 0.261  free 0.414  strat 0.378
+185 PKU-Alignment/beaver-7b-v1.0-reward                     0.195  free 0.346  strat 0.216
+186 allenai/open_instruct_dev-rm_2e-5_1_100pctflipped__1__1 0.088  free 0.219  strat 0.171
+187 allenai/open_instruct_dev-rm_3e-6_1_100pctflipped__1__1 0.075  free 0.202  strat 0.159
+188 allenai/open_instruct_dev-rm_1e-6_1_100pctflipped__1__1 0.071  free 0.194  strat 0.155
