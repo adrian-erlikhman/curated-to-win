@@ -15,8 +15,8 @@ for a, b in (("\\%", "%"), ("$\\times$", "x"), ("~", " "), ("---", "-"), ("--", 
     ab = ab.replace(a, b)
 out = os.path.join(os.path.expanduser("~"), "Downloads", "ARRSI-submission-fields.txt")
 open(out, "w", encoding="utf-8").write(
-    "TITLE\n%s\n\nABSTRACT\n%s\n\nKEYWORDS\nreward models; LLM-as-a-judge; evaluation validity; "
-    "benchmark curation; meta-evaluation; RewardBench\n\nTL;DR\nOvertaking the leader on a "
-    "reward-model benchmark requires removing at least the score gap; linear programs show "
-    "curation reaches that floor at the top of RewardBench and RewardBench 2.\n" % (title, ab))
+    "TITLE\n%s\n\nABSTRACT\n%s\n\nKEYWORDS\nreward models, LLM-as-a-judge, evaluator selection, certification, "
+    "evaluation validity, benchmark curation, RewardBench\n\nTL;DR\nA closed-form certificate says how much of a validation set can be "
+    "removed before the selected reward model or judge stops winning; it is exact in items "
+    "and tight on RewardBench and RewardBench 2.\n" % (title, ab))
 print(open(out, encoding="utf-8").read())

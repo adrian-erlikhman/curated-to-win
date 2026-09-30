@@ -1,0 +1,192 @@
+{
+ "rb1": {
+  "leader": "infly/INF-ORM-Llama3.1-70B",
+  "runner_up": "nicolinho/QRM-Gemma-2-27B",
+  "gap": 0.006691823149018394,
+  "lp_min_cost": 0.006777019855535249,
+  "lp_min_items": 19,
+  "item_cert": 12,
+  "item_cert_model": "nicolinho/QRM-Gemma-2-27B",
+  "plausible": [
+   {
+    "delta": 0.005,
+    "lower": 1,
+    "upper": 1
+   },
+   {
+    "delta": 0.01,
+    "lower": 3,
+    "upper": 3
+   },
+   {
+    "delta": 0.02,
+    "lower": 5,
+    "upper": 6
+   },
+   {
+    "delta": 0.05,
+    "lower": 11,
+    "upper": 11
+   },
+   {
+    "delta": 0.1,
+    "lower": 19,
+    "upper": 19
+   }
+  ],
+  "validation": [
+   {
+    "n": 100,
+    "p_correct": 0.3535,
+    "cert_1": {
+     "share_certified": 0.5665,
+     "p_correct_certified": 0.4501323918799647,
+     "p_correct_uncertified": 0.22722029988465975
+    },
+    "cert_2": {
+     "share_certified": 0.152,
+     "p_correct_certified": 0.6447368421052632,
+     "p_correct_uncertified": 0.30129716981132076
+    },
+    "cert_5": {
+     "share_certified": 0.001,
+     "p_correct_certified": 0.5,
+     "p_correct_uncertified": 0.3533533533533533
+    }
+   },
+   {
+    "n": 200,
+    "p_correct": 0.462,
+    "cert_1": {
+     "share_certified": 0.3605,
+     "p_correct_certified": 0.6574202496532594,
+     "p_correct_uncertified": 0.3518373729476153
+    },
+    "cert_2": {
+     "share_certified": 0.0755,
+     "p_correct_certified": 0.8741721854304636,
+     "p_correct_uncertified": 0.4283396430502975
+    },
+    "cert_5": {
+     "share_certified": 0.0,
+     "p_correct_certified": null,
+     "p_correct_uncertified": 0.462
+    }
+   },
+   {
+    "n": 500,
+    "p_correct": 0.656,
+    "cert_1": {
+     "share_certified": 0.271,
+     "p_correct_certified": 0.9261992619926199,
+     "p_correct_uncertified": 0.5555555555555556
+    },
+    "cert_2": {
+     "share_certified": 0.0265,
+     "p_correct_certified": 0.9811320754716981,
+     "p_correct_uncertified": 0.6471494607087828
+    },
+    "cert_5": {
+     "share_certified": 0.0,
+     "p_correct_certified": null,
+     "p_correct_uncertified": 0.656
+    }
+   }
+  ]
+ },
+ "rb2": {
+  "leader": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+  "runner_up": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+  "gap": 0.05221394537655788,
+  "lp_min_cost": 0.05302516572387006,
+  "lp_min_items": 68,
+  "item_cert": 43,
+  "item_cert_model": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+  "plausible": [
+   {
+    "delta": 0.005,
+    "lower": 1,
+    "upper": 1
+   },
+   {
+    "delta": 0.01,
+    "lower": 1,
+    "upper": 1
+   },
+   {
+    "delta": 0.02,
+    "lower": 1,
+    "upper": 1
+   },
+   {
+    "delta": 0.05,
+    "lower": 1,
+    "upper": 1
+   },
+   {
+    "delta": 0.1,
+    "lower": 6,
+    "upper": 6
+   }
+  ],
+  "validation": [
+   {
+    "n": 100,
+    "p_correct": 0.8715,
+    "cert_1": {
+     "share_certified": 0.916,
+     "p_correct_certified": 0.9132096069868996,
+     "p_correct_uncertified": 0.4166666666666667
+    },
+    "cert_2": {
+     "share_certified": 0.7625,
+     "p_correct_certified": 0.9534426229508197,
+     "p_correct_uncertified": 0.608421052631579
+    },
+    "cert_5": {
+     "share_certified": 0.3595,
+     "p_correct_certified": 0.9986091794158554,
+     "p_correct_uncertified": 0.8001561280249805
+    }
+   },
+   {
+    "n": 200,
+    "p_correct": 0.968,
+    "cert_1": {
+     "share_certified": 0.9495,
+     "p_correct_certified": 0.9899947340705635,
+     "p_correct_uncertified": 0.5544554455445545
+    },
+    "cert_2": {
+     "share_certified": 0.879,
+     "p_correct_certified": 0.9977246871444824,
+     "p_correct_uncertified": 0.7520661157024794
+    },
+    "cert_5": {
+     "share_certified": 0.4485,
+     "p_correct_certified": 1.0,
+     "p_correct_uncertified": 0.9419764279238441
+    }
+   },
+   {
+    "n": 500,
+    "p_correct": 0.999,
+    "cert_1": {
+     "share_certified": 0.994,
+     "p_correct_certified": 1.0,
+     "p_correct_uncertified": 0.8333333333333334
+    },
+    "cert_2": {
+     "share_certified": 0.9705,
+     "p_correct_certified": 1.0,
+     "p_correct_uncertified": 0.9661016949152542
+    },
+    "cert_5": {
+     "share_certified": 0.5035,
+     "p_correct_certified": 1.0,
+     "p_correct_uncertified": 0.9979859013091642
+    }
+   }
+  ]
+ }
+}
