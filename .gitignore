@@ -1,0 +1,7 @@
+data/
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+__pycache__/

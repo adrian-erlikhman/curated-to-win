@@ -1,0 +1,242 @@
+{
+ "official_top": "infly/INF-ORM-Llama3.1-70B",
+ "n_models": 118,
+ "random_sets": [
+  {
+   "n": 25,
+   "p_top_kept": 0.142,
+   "distinct_winners": 60,
+   "worst_winner_rank": 89,
+   "tau_top10_median": 0.29814239699997197,
+   "tau_top10_p10": -0.18741784341058304
+  },
+  {
+   "n": 50,
+   "p_top_kept": 0.249,
+   "distinct_winners": 33,
+   "worst_winner_rank": 53,
+   "tau_top10_median": 0.37796447300922725,
+   "tau_top10_p10": -0.05679506147821281
+  },
+  {
+   "n": 100,
+   "p_top_kept": 0.351,
+   "distinct_winners": 20,
+   "worst_winner_rank": 21,
+   "tau_top10_median": 0.4893995777976702,
+   "tau_top10_p10": 0.11565116544447313
+  },
+  {
+   "n": 200,
+   "p_top_kept": 0.481,
+   "distinct_winners": 12,
+   "worst_winner_rank": 13,
+   "tau_top10_median": 0.5843065474681431,
+   "tau_top10_p10": 0.2696698199635401
+  },
+  {
+   "n": 500,
+   "p_top_kept": 0.649,
+   "distinct_winners": 9,
+   "worst_winner_rank": 9,
+   "tau_top10_median": 0.7333333333333333,
+   "tau_top10_p10": 0.522862326927363
+  },
+  {
+   "n": 1000,
+   "p_top_kept": 0.78,
+   "distinct_winners": 6,
+   "worst_winner_rank": 7,
+   "tau_top10_median": 0.8222222222222221,
+   "tau_top10_p10": 0.6741998624632421
+  }
+ ],
+ "natural": {
+  "only Chat": {
+   "winner": "sfairXC/FsfairX-LLaMA3-RM-v0.1",
+   "official_rank": 22,
+   "score": 0.9944134078212282,
+   "n_tied": 1
+  },
+  "without Chat": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.9459104594208263,
+   "n_tied": 1
+  },
+  "only Chat Hard": {
+   "winner": "Skywork/Skywork-Reward-Gemma-2-27B",
+   "official_rank": 4,
+   "score": 0.9144736842105283,
+   "n_tied": 1
+  },
+  "without Chat Hard": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.9647080352972027,
+   "n_tied": 1
+  },
+  "only Safety": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.936486486486482,
+   "n_tied": 1
+  },
+  "without Safety": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.955908446234456,
+   "n_tied": 1
+  },
+  "only Reasoning": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.9911571724777644,
+   "n_tied": 1
+  },
+  "without Reasoning": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.9376848842373624,
+   "n_tied": 1
+  },
+  "subset alpacaeval-easy": {
+   "winner": "internlm/internlm2-20b-reward",
+   "official_rank": 11,
+   "score": 1.0000000000000002,
+   "n_tied": 11
+  },
+  "subset alpacaeval-hard": {
+   "winner": "internlm/internlm2-7b-reward",
+   "official_rank": 16,
+   "score": 1.0000000000000002,
+   "n_tied": 14
+  },
+  "subset alpacaeval-length": {
+   "winner": "stabilityai/stablelm-2-12b-chat",
+   "official_rank": 39,
+   "score": 1.0000000000000002,
+   "n_tied": 2
+  },
+  "subset donotanswer": {
+   "winner": "PKU-Alignment/beaver-7b-v2.0-cost",
+   "official_rank": 95,
+   "score": 0.911764705882353,
+   "n_tied": 1
+  },
+  "subset hep-cpp": {
+   "winner": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
+   "official_rank": 24,
+   "score": 0.9908536585365858,
+   "n_tied": 1
+  },
+  "subset hep-go": {
+   "winner": "openai/gpt-4o-2024-08-06",
+   "official_rank": 18,
+   "score": 0.9878048780487809,
+   "n_tied": 1
+  },
+  "subset hep-java": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.9878048780487809,
+   "n_tied": 3
+  },
+  "subset hep-js": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 1.0000000000000004,
+   "n_tied": 2
+  },
+  "subset hep-python": {
+   "winner": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
+   "official_rank": 24,
+   "score": 0.9969512195121956,
+   "n_tied": 1
+  },
+  "subset hep-rust": {
+   "winner": "openai/gpt-4o-2024-08-06",
+   "official_rank": 18,
+   "score": 0.9878048780487809,
+   "n_tied": 1
+  },
+  "subset llmbar-adver-GPTInst": {
+   "winner": "Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+   "official_rank": 3,
+   "score": 0.978260869565217,
+   "n_tied": 2
+  },
+  "subset llmbar-adver-GPTOut": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.9361702127659576,
+   "n_tied": 1
+  },
+  "subset llmbar-adver-manual": {
+   "winner": "internlm/internlm2-20b-reward",
+   "official_rank": 11,
+   "score": 0.8695652173913042,
+   "n_tied": 1
+  },
+  "subset llmbar-adver-neighbor": {
+   "winner": "Skywork/Skywork-Reward-Gemma-2-27B",
+   "official_rank": 4,
+   "score": 0.895522388059701,
+   "n_tied": 3
+  },
+  "subset llmbar-natural": {
+   "winner": "nicolinho/QRM-Gemma-2-27B",
+   "official_rank": 2,
+   "score": 0.9600000000000003,
+   "n_tied": 2
+  },
+  "subset math-prm": {
+   "winner": "Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+   "official_rank": 3,
+   "score": 1.0000000000000018,
+   "n_tied": 1
+  },
+  "subset mt-bench-easy": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.9999999999999998,
+   "n_tied": 47
+  },
+  "subset mt-bench-hard": {
+   "winner": "Ray2333/GRM-Llama3-8B-rewardmodel-ft",
+   "official_rank": 9,
+   "score": 0.9459459459459458,
+   "n_tied": 1
+  },
+  "subset mt-bench-med": {
+   "winner": "infly/INF-ORM-Llama3.1-70B",
+   "official_rank": 1,
+   "score": 0.9999999999999999,
+   "n_tied": 21
+  },
+  "subset refusals-dangerous": {
+   "winner": "PKU-Alignment/beaver-7b-v2.0-cost",
+   "official_rank": 95,
+   "score": 1.0000000000000002,
+   "n_tied": 1
+  },
+  "subset refusals-offensive": {
+   "winner": "Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+   "official_rank": 3,
+   "score": 1.0000000000000002,
+   "n_tied": 7
+  },
+  "subset xstest-should-refuse": {
+   "winner": "Ray2333/GRM-llama3.2-3B-rewardmodel-ft",
+   "official_rank": 10,
+   "score": 0.9935064935064937,
+   "n_tied": 3
+  },
+  "subset xstest-should-respond": {
+   "winner": "mattshumer/Reflection-70B",
+   "official_rank": 23,
+   "score": 0.9800000000000006,
+   "n_tied": 2
+  }
+ }
+}

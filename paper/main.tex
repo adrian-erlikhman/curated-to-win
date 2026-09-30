@@ -1,0 +1,101 @@
+% ARRSI @ AACL-IJCNLP 2026 -- short paper (4 pages + references), *ACL format.
+\documentclass[11pt]{article}
+\usepackage[review]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{proposition}{Proposition}
+\input{numbers}
+
+\title{Curated to Win: A Reward-Model Leaderboard's Lead\\Is Only as Robust as Its Score Gap}
+
+\author{Anonymous submission}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Automated research and self-improvement pipelines pick reward models and LLM judges by their accuracy on a validation set, and that set is often curated by the same pipeline or its designers. We ask how much the choice of items can move the winner. For any benchmark score, we prove that making a trailing model overtake the leader requires removing a share of the benchmark at least equal to the score gap between them. On RewardBench (\OneModels{} models, \OneItems{} items) and RewardBench~2 (\TwoModels{} models, \TwoItems{} items), linear programs show that this floor is attained. Every model in RewardBench's top 20 can be placed first by keeping at least \OneFreeKeepTopTwentyMin\% of the benchmark. The runner-up takes first place when \OneSecondRemoved{} items (\OneSecondCost\% of the score weight) are removed. Keeping every section's share fixed raises the cost only modestly. Curation need not be adversarial to matter: on a random 100-item validation set, RewardBench's official leader comes first in only \OneKeepHundred\% of draws. We recommend reporting a lead as a curation margin, and fixing validation items before the pipeline sees any results.
+\end{abstract}
+
+\section{Introduction}
+
+Systems that automate research or improve themselves need an evaluator: a reward model to optimise against, or an LLM judge to rank candidate outputs \citep{lu2024aiscientist,zheng2023judging}. Evaluators are chosen by meta-evaluation, their agreement with human preference labels on a benchmark such as RewardBench \citep{lambert2024rewardbench,malik2025rewardbench2}. In an automated pipeline, the items used for that choice are often selected by the pipeline itself: a filtered subset, a domain slice, or a quick validation set. If the ranking of evaluators depends on which items are kept, then whoever keeps the items also chooses the evaluator. This is a form of reward hacking one level above the reward \citep{gao2022overoptimization}.
+
+Earlier work shows that leaderboards are sensitive to benchmark choice, answer format and private testing \citep{dehghani2021lottery,alzahrani2024targets,singh2025illusion,zhang2024tradeoffs}. We give an exact account for the simplest curation operation, keeping a subset of items, and measure it on two public reward-model leaderboards. We make three contributions:
+\begin{itemize}\setlength\itemsep{0pt}
+\item A floor: overtaking the leader requires removing at least the score gap (Prop.~\ref{prop:floor}).
+\item A measurement: linear programs over item weights, rounded to real subsets and re-checked, show that the floor is attained on RewardBench and RewardBench~2, including when each section keeps its share.
+\item A benign baseline: random validation sets of realistic size often crown a model other than the official leader.
+\end{itemize}
+
+\section{Setup}
+
+A benchmark has items $i=1,\dots,N$ with official weights $w^0_i\ge 0$, $\sum_i w^0_i=1$. Model $m$ has per-item score $r_{mi}\in[0,1]$ and official score $S_m=\sum_i w^0_i r_{mi}$. A \emph{curation} keeps a set $K$ with kept share $f=\sum_{i\in K}w^0_i$ and rescores each model on it, $S^K_m=\sum_{i\in K}w^0_i r_{mi}/f$. We call $1-f$ the \emph{removed share}.
+
+\paragraph{Data.} RewardBench v1 publishes per-item results for \OneModels{} models on \OneItems{} preference pairs in 23 subsets \citep{lambert2024rewardbench}. We rebuild each official score from these results: section scores are count-weighted means of subset accuracy, with \texttt{math-prm} upweighted as in the released code, and the overall score is the mean of the four sections. Our scores match the public leaderboard. Result files are aligned by position, and a text check found no misaligned items. RewardBench~2 \citep{malik2025rewardbench2} publishes results by item id. We use the \TwoModels{} models with results on all \TwoItems{} items of its five accuracy subsets, scored as the mean of subset accuracies. We leave out the Ties subset, which is scored differently.
+
+\paragraph{Crowning.} Model $m$ is \emph{crowned} by $K$ if $S^K_m>S^K_k$ for every other model $k$. For a fixed $f$, crowning is a linear feasibility problem in relaxed weights $w$:
+\begin{align*}
+\max_{w,t}\; t \;\;\text{s.t.}\;\; &\textstyle\sum_i w_i (r_{mi}-r_{ki})\ge t \;\;\forall k\neq m,\\
+&0\le w_i\le w^0_i/f,\quad \textstyle\sum_i w_i=1,
+\end{align*}
+and $m$ is crownable at $f$ if $t^*>0$. A \emph{section-preserving} variant also fixes each section's total weight at its official value, so the curated set keeps the benchmark's composition. We scan $f$ downward from 1 and then bisect. Each LP solution is rounded to a real subset: items at or near their upper bound are kept, and each keeps its official weight, renormalised. The subset is rescored, and it counts only if $m$ is still strictly first. All reported shares are those of the rounded subsets.
+
+\section{A Floor on the Cost of Curation}
+
+\begin{proposition}\label{prop:floor}
+If $S_a-S_b=g>0$, then every $K$ with $S^K_b\ge S^K_a$ removes a share of at least $g$.
+\end{proposition}
+\begin{proof}
+Let $D_i=r_{ai}-r_{bi}\in[-1,1]$. Then $f\,(S^K_a-S^K_b)=\sum_{i\in K}w^0_iD_i=g-\sum_{i\notin K}w^0_iD_i\ge g-(1-f)$, which is positive whenever $1-f<g$.
+\end{proof}
+Crowning a model means overtaking the leader, so the removed share is at least the model's gap to the leader. Pairwise, the floor is reached by removing items the leader gets right and the trailing model gets wrong, if there are enough of them. With many competitors it is not obvious that the floor is reachable: removing items to help $m$ against the leader can let a third model through. Whether it is reachable is an empirical question, which we answer next.
+
+\section{Results}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig_cost}
+\caption{Share of the benchmark that must be removed to put each model first, against its official gap to the leader. Every point sits on or above the dashed floor (Prop.~\ref{prop:floor}). Unconstrained curation reaches the floor; keeping each section's share costs more, but stays within a small multiple of the gap.}
+\label{fig:cost}
+\end{figure}
+
+\paragraph{The floor is attained.} On RewardBench, the median ratio of removed share to score gap is \OneFreeRatioMedian{} for unconstrained curation. Across all \OneFreeCrownable{} crownable models the maximum is \OneFreeRatioMax{}, so the multi-model cost is essentially the pairwise floor (Figure~\ref{fig:cost}). The leader's margin over the runner-up is \OneSecondGap{} points. Removing \OneSecondRemoved{} of \OneItems{} items (\OneSecondCost\% of the score weight) makes the runner-up the winner. Every model in the top 20, down to one \OneTopTwentyGap{} points behind the leader, can be crowned while keeping at least \OneFreeKeepTopTwentyMin\% of the benchmark. In total, \OneFreeAtKeepNinety{} of \OneModels{} models can be crowned keeping 90\%, and \OneFreeAtKeepEighty{} keeping 80\%. RewardBench~2 behaves the same way: the median ratio is \TwoFreeRatioMedian{} and the maximum is \TwoFreeRatioMax{}. Its runner-up needs \TwoSecondCost\% removed against a \TwoSecondGap-point gap.
+
+\paragraph{Preserving composition helps little.} A curator who keeps every section at its official share leaves no trace in the section breakdown. For the top 20 on RewardBench this costs at most \OneStratRatioTopTwentyMax{} times the gap (median \OneStratRatioMedian{} over all models), and every top-20 model can still be crowned keeping at least \OneStratKeepTopTwentyMin\%. On RewardBench~2 the median is \TwoStratRatioMedian{}.
+
+\paragraph{Benign curation.} Table~\ref{tab:benign} draws random validation sets of $n$ items, with items drawn in proportion to their official weight so that a set's mean score is unbiased for the official score. With $n=100$, RewardBench's leader comes first in \OneKeepHundred\% of draws, and \OneWinnersHundred{} different models win at least once. Natural slices also move the winner. Scoring on a single section produces \OneSectionWinnersDistinct{} different winners across the four sections. Among slices with a unique winner, the \OneNatWorstName{} slice alone is won by the model ranked \#\OneNatWorstRank{} overall.
+
+\begin{table}[t]
+\centering\small
+\input{table_benign}
+\caption{Random validation sets of $n$ items (2{,}000 draws each). ``Leader kept'': share of draws where the official leader is strictly first after random tie-breaking. ``Winners'': number of distinct models that ever come first.}
+\label{tab:benign}
+\end{table}
+
+\section{Implications for Automated Pipelines}
+
+A pipeline that selects its evaluator on items it curated, or on a slice it chose after seeing results, gains nothing from a lead smaller than the share of items it could plausibly have dropped. Three practices follow.
+(i) Report the \emph{curation margin} of a selection: by Prop.~\ref{prop:floor} and our measurements it equals the score gap, so RewardBench's \OneSecondGap-point lead is a \OneSecondGap\% curation margin.
+(ii) Fix and hash validation items before any candidate is scored, and log every subset or filter the pipeline applies.
+(iii) Size validation sets for rank stability, not only for accuracy. A hundred well-chosen items can estimate a model's accuracy closely \citep{polo2024tiny}, but at $n\le 200$ the top-1 choice among strong reward models is close to a lottery (Table~\ref{tab:benign}), consistent with measured benchmark variance \citep{madaan2024variance}.
+
+\section*{Limitations}
+We study one curation operation, removing items, on two reward-model benchmarks. Reweighting within the kept set, paraphrasing items or changing the prompt format would give a curator more room, so our costs are upper bounds on what curation needs. The LP relaxation is rounded and re-verified. The reported shares are therefore achievable, but they may not be the smallest possible. Many leaderboard entries are close variants of one another, and a model exactly tied with a variant can never be strictly first; those models count as not crownable. We do not claim that any published result was curated. RewardBench~2's Ties subset is excluded, so its scores differ slightly from the official ones.
+
+\section*{Reporting and Reproducibility}
+All results come from public per-item result files (\texttt{allenai/reward-bench-results}, \texttt{allenai/reward-bench-2-results}). All analysis ran on one laptop CPU with SciPy's HiGHS solver, and the full RewardBench sweep takes minutes. No models were run. One failed run is worth reporting: the first version of the section-preserving search began its bisection at a very small kept share, where rounding can empty a section, and it wrongly reported the leader as not crownable. The fixed search scans from $f=1$ downward. Code and derived data will be released with the camera-ready version.
+
+\section*{Use of AI Assistants}
+An AI assistant (Claude, Anthropic) helped write the analysis code and draft the text. The author chose the study, checked the proof and the results, and takes responsibility for the content.
+
+\bibliography{references}
+
+\end{document}
