@@ -14,8 +14,19 @@ PAPER = os.path.join(ROOT, "paper")
 N_ITEMS = {"": 2985, "rb2_": 1753}
 
 
-def summarize(tag):
+def load_rows(tag):
+    """Crowning results, with the unconstrained cost taken as the better of the
+    two searches: a verified section-preserving subset is also a valid
+    unconstrained one, and both searches are heuristic (bisection + rounding)."""
     rows = json.load(open(os.path.join(RES, "crown_%sall.json" % tag)))
+    for r in rows:
+        if r["strat"] is not None and (r["free"] is None or r["strat"]["f"] > r["free"]["f"]):
+            r["free"] = dict(r["strat"])
+    return rows
+
+
+def summarize(tag):
+    rows = load_rows(tag)
     top = rows[0]["official"]
     out = dict(n_models=len(rows))
     for key in ("free", "strat"):
@@ -105,6 +116,34 @@ def main():
         secs = {k: v for k, v in nat.items() if k.startswith("only ")}
         mac(pre + "SectionWinnersDistinct",
             len({v["winner"] for v in secs.values()}))
+
+    # pairwise attainability: items the leader gets right and model j gets
+    # wrong must carry at least the gap for the pairwise floor to be exact
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from load import load
+    d = load()
+    S = d["R"] @ d["w0"]
+    lead = int(np.argmax(S))
+    att = [float(d["w0"][(d["R"][lead] - d["R"][j]) >= 1].sum()) >= S[lead] - S[j]
+           for j in range(len(S)) if j != lead]
+    mac("OneAttainable", sum(att)); mac("OneTrailing", len(att))
+
+    # table: the leader and the next seven models on RewardBench
+    rows = load_rows("")
+    top = rows[0]["official"]
+    tex = ["\\begin{tabular}{lrrrrr}", "\\toprule",
+           "& & & \\multicolumn{2}{c}{Removed to crown} & \\\\",
+           "\\cmidrule(lr){4-5}",
+           "Model & Score & Gap & Share & Items & Strat.\\\\", "\\midrule"]
+    for r in rows[1:8]:
+        f, s = r["free"], r["strat"]
+        name = r["model"].split("/")[-1].replace("_", "\\_")
+        tex.append("%s & %.1f & %.2f & %.2f & %d & %.2f\\\\" % (
+            name, 100 * r["official"], 100 * (top - r["official"]), 100 * (1 - f["f"]),
+            N_ITEMS[""] - f["n_items"], 100 * (1 - s["f"])))
+    tex += ["\\bottomrule", "\\end{tabular}"]
+    open(os.path.join(PAPER, "table_top.tex"), "w").write("\n".join(tex) + "\n")
 
     open(os.path.join(PAPER, "numbers.tex"), "w").write("\n".join(lines) + "\n")
 
