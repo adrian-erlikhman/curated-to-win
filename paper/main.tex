@@ -1,6 +1,6 @@
-% ARRSI @ AACL-IJCNLP 2026 -- short paper (4 pages + references), *ACL format.
+% ARRSI @ AACL-IJCNLP 2026 -- short paper (4 pages + references), *ACL format. Camera-ready.
 \documentclass[11pt]{article}
-\usepackage[review]{acl}
+\usepackage[final]{acl}
 \usepackage{times}
 \usepackage{latexsym}
 \usepackage[T1]{fontenc}
@@ -15,7 +15,9 @@
 
 \title{Curated to Win: Certifying Reward-Model and Judge Selection\\Against Evaluation-Set Curation}
 
-\author{Anonymous submission}
+\author{Adrian Erlikhman \\
+  Los Angeles Community College District \\
+  \texttt{erlikhman.adrian@gmail.com}}
 
 \begin{document}
 \maketitle
@@ -106,7 +108,7 @@ For an automated pipeline that selects an evaluator: (i) fix and hash the valida
 We study one curation operation, removing items, on two reward-model benchmarks. Reweighting the kept items, paraphrasing them or changing the prompt format would give a curator more freedom, so the certificates hold only against removal. The item certificate is exact; the LP costs are achievable but may not be minimal. The validation-set experiment draws random sets, not adversarial ones, and uses one threshold (2 points). We do not claim that any published result was curated. RewardBench~2's Ties subset is excluded, so its scores differ slightly from the official ones.
 
 \section*{Reporting and Reproducibility}
-All results come from public per-item result files (\texttt{allenai/reward-bench-results}, \texttt{allenai/reward-bench-2-results}). All analysis ran on one laptop CPU with SciPy's HiGHS solver; each full LP sweep takes one to two hours, the certificates seconds, and no models were run. One failed run is worth reporting: the first section-preserving search began its bisection at a very small kept share, where rounding can empty a section, and wrongly reported the leader as not crownable; the corrected search scans from $f=1$ downward. Code and derived data will be released with the camera-ready version.
+All results come from public per-item result files (\texttt{allenai/reward-bench-results}, \texttt{allenai/reward-bench-2-results}). All analysis ran on one laptop CPU with SciPy's HiGHS solver; each full LP sweep takes one to two hours, the certificates seconds, and no models were run. One failed run is worth reporting: the first section-preserving search began its bisection at a very small kept share, where rounding can empty a section, and wrongly reported the leader as not crownable; the corrected search scans from $f=1$ downward. Code and derived data are at \url{https://github.com/adrian-erlikhman/curated-to-win}.
 
 \section*{Use of AI Assistants}
 An AI assistant (Claude, Anthropic) helped write the analysis code and draft the text. The author chose the study, checked the proofs and the results, and takes responsibility for the content.

@@ -11,3 +11,14 @@ leaderboard? Analysis of RewardBench and RewardBench 2 public per-item results.
     python src/report.py           # paper/numbers.tex, table, figure
 
 The paper (`paper/main.tex`) reads every number from `paper/numbers.tex`.
+
+## Paper
+
+Adrian Erlikhman. *Curated to Win: Certifying Reward-Model and Judge Selection
+Against Evaluation-Set Curation.* ARRSI workshop at AACL-IJCNLP 2026
+(accepted; camera-ready in `paper/main.pdf`). Build with `tectonic paper/main.tex`
+or pdfLaTeX + BibTeX.
+
+`data/` is not in the repo (about 50 MB of downloaded results); the two fetch
+scripts recreate it from `allenai/reward-bench-results` and
+`allenai/reward-bench-2-results`.
