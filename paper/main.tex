@@ -37,13 +37,13 @@ Leaderboard rankings are known to shift with the choice of benchmark, the answer
 \item Two uses: the set of possible winners at a given curation budget, and certificates on small validation sets, which separate selections that hold up from those that do not.
 \end{itemize}
 
-\section{Setup}
+\section{Scores, Curations and Data}
 
 A benchmark has items $i=1,\dots,N$ with official weights $w^0_i\ge 0$, $\sum_i w^0_i=1$. Model $m$ has per-item score $r_{mi}\in[0,1]$ and official score $S_m=\sum_i w^0_i r_{mi}$. A \emph{curation} keeps a subset $K$ of the items, with kept share $f=\sum_{i\in K}w^0_i$, and rescores every model on $K$ alone: $S^K_m=\sum_{i\in K}w^0_i r_{mi}/f$. We call $1-f$ the \emph{removed share}. $K$ \emph{crowns} $m$ if $m$ scores strictly highest on it, $S^K_m>S^K_k$ for every $k\neq m$. The winner is \emph{certified} against a class of curations if it stays first under every curation in the class.
 
 \paragraph{Data.} RewardBench v1 publishes per-item results for \OneModels{} models on \OneItems{} preference pairs in 23 subsets \citep{lambert2024rewardbench}. We rebuild each official score from them: a section score is the count-weighted mean of its subsets' accuracies, with \texttt{math-prm} upweighted as in the released code, and the overall score is the mean of the four section scores. For four models, from the winner down to a 0.5B chat model, our subset accuracies match RewardBench's published values exactly. The result files list items by position, and a check of the item text found no misaligned items. RewardBench~2 \citep{malik2025rewardbench2} publishes results by item id. We use the \TwoModels{} models with results on all \TwoItems{} items of its five accuracy subsets, score each model by the mean of its subset accuracies, and exclude the Ties subset, which uses a different metric.
 
-\section{Curation Certificates}
+\section{Certificates in Weight and in Items}
 
 Let $a$ be the winner. For each challenger $c$, let $g_c=S_a-S_c>0$ be its gap to the winner and $d^c_i=w^0_i(r_{ai}-r_{ci})$ the contribution of item $i$ to that gap.
 
@@ -60,47 +60,49 @@ Sort the contributions so that $d^c_{(1)}\ge d^c_{(2)}\ge\cdots$, and let $k_c=\
 \begin{proof}
 From the identity above, $S^K_c>S^K_a$ iff $\sum_{i\notin K}d^c_i>g_c$. Any $k$ removed items contribute at most $\sum_{j\le k}d^c_{(j)}$.
 \end{proof}
-Both certificates need only the table of per-item scores: $g^\star$ can be read off the leaderboard, and $k^\star$ takes one sort per challenger. Prop.~\ref{prop:floor} is only a lower bound, because removing items that favor the winner over one challenger can let a third model overtake both. To see how close the bound is, we compute for each model $m$ the largest kept share $f$ at which some curation crowns it. For fixed $f$, relaxing the subset to item weights $w$ gives a linear program:
+Both certificates need only the table of per-item scores: $g^\star$ can be read off the leaderboard, and $k^\star$ takes one sort per challenger.
+
+\paragraph{Cheapest crowning curations.} Prop.~\ref{prop:floor} is only a lower bound, because removing items that favor the winner over one challenger can let a third model overtake both. To see how close the bound is, we compute for each model $m$ the largest kept share $f$ at which some curation crowns it. For fixed $f$, relaxing the subset to item weights $w$ gives a linear program:
 \begin{align*}
 \max_{w,t}\; t \;\;\text{s.t.}\;\; &\textstyle\sum_i w_i (r_{mi}-r_{ki})\ge t \;\;\forall k\neq m,\\
 &0\le w_i\le w^0_i/f,\quad \textstyle\sum_i w_i=1,
 \end{align*}
 and $m$ can be crowned at $f$ if $t^*>0$. We scan $f$ downward from 1 and then bisect. We round each LP solution to an item subset by keeping the items at or near their upper bound, and accept the subset only if $m$ is still strictly first after rescoring, so every reported cost comes from a real, verified subset. A \emph{section-preserving} variant also fixes each section's total weight, so that the curated set keeps the benchmark's composition. Any verified section-preserving subset is also a valid unconstrained one, so we report the unconstrained cost as the smaller of the two. For ordinal aggregates such as mean win rate, the analogous selection problem is NP-hard \citep{gordienko2026rig}; for weighted accuracy, each check is a linear program.
 
-\paragraph{Possible winners.} Let the curation budget $\delta$ be the largest share that may have been removed, and let $P(\delta)$ be the set of models that some curation removing at most $\delta$ can crown. By Prop.~\ref{prop:floor}, $P(\delta)$ contains only models within $\delta$ of the winner, $P(\delta)\subseteq\{m: S_a-S_m\le\delta\}$. Every model whose verified LP cost is at most $\delta$ is in $P(\delta)$. Together these bound the size of $P(\delta)$ from both sides.
-
-\section{Results}
-
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.85\textwidth]{fig_cost}
-\caption{Share of the benchmark removed to crown each model, plotted against the model's official gap to the winner. Every point lies on or above the dashed line $y=x$, the bound of Prop.~\ref{prop:floor}. Unconstrained curation reaches the bound for nearly every model; keeping each section's share fixed costs more, up to \OneStratRatioMax{} times the gap.}
+\caption{Share of the benchmark that must be removed to crown each model, against the model's official gap to the winner: RewardBench (\OneModels{} models, left) and RewardBench~2 (\TwoModels{}, right). Blue: unconstrained curation, which lies on the bound $y=x$ of Prop.~\ref{prop:floor} for most models. Orange: curation that holds each section's share fixed, at most \OneStratRatioMax{} times the gap.}
 \label{fig:cost}
 \end{figure*}
 
-\paragraph{Certificates of the two winners.} RewardBench's winner leads by $g^\star=\OneCertGap$ points, so it stays first under any curation that removes less than \OneCertGap\% of benchmark weight. The cheapest crowning curation we found removes \OneCertLP\%, so the certificate is tight to within 0.01 points. In items, the winner stays first when any \OneCertItemsSafe{} items are removed, and removing \OneCertItems{} particular items makes the runner-up the new winner, which we confirmed by rescoring. (The LP minimizes weight, not item count, and its curation removed \OneCertLPItems{} items.) RewardBench~2's winner leads by \TwoCertGap{} points, needs \TwoCertLP\% of the weight removed to lose first place, and stays first when any \TwoCertItemsSafe{} items are removed.
+\paragraph{Possible-winner sets.} Let the curation budget $\delta$ be the largest share that may have been removed, and let $P(\delta)$ be the set of models that some curation removing at most $\delta$ can crown. By Prop.~\ref{prop:floor}, $P(\delta)$ contains only models within $\delta$ of the winner, $P(\delta)\subseteq\{m: S_a-S_m\le\delta\}$. Every model whose verified LP cost is at most $\delta$ is in $P(\delta)$. Together these bound the size of $P(\delta)$ from both sides.
+
+\section{Results on RewardBench and RewardBench~2}
+
+\paragraph{RewardBench's winner falls to \OneCertItems{} removed items.} RewardBench's winner leads by $g^\star=\OneCertGap$ points, so it stays first under any curation that removes less than \OneCertGap\% of benchmark weight. The cheapest crowning curation we found removes \OneCertLP\%, so the certificate is tight to within 0.01 points. In items, the winner stays first when any \OneCertItemsSafe{} items are removed, and removing \OneCertItems{} particular items makes the runner-up the new winner, which we confirmed by rescoring. (The LP minimizes weight, not item count, and its curation removed \OneCertLPItems{} items.) RewardBench~2's winner leads by \TwoCertGap{} points, needs \TwoCertLP\% of the weight removed to lose first place, and stays first when any \TwoCertItemsSafe{} items are removed.
 
 \paragraph{The weight bound is nearly tight.} Every model on both benchmarks can be crowned by some curation. On RewardBench, the ratio of removed share to gap has a median of \OneFreeRatioMedian{} and is at most \OneFreeRatioTopTwentyMax{} among the top 20 models (Figure~\ref{fig:cost}); the largest ratio over all models is \OneFreeRatioMax{}. Every top-20 model can be crowned while keeping at least \OneFreeKeepTopTwentyMin\% of the benchmark. On RewardBench~2, the median ratio is \TwoFreeRatioMedian{} and the maximum \TwoFreeRatioMax{}. A curator who also keeps each section's share fixed, so that the per-section breakdown shows no trace, pays a median of \OneStratRatioMedian{} times the gap on RewardBench and \TwoStratRatioMedian{} on RewardBench~2.
 
 \begin{table}[t]
 \centering\small
 \input{table_plausible}
-\caption{Number of possible winners $|P(\delta)|$ at curation budget $\delta$ (share of benchmark weight). Where a range is shown, the lower end counts models with a verified LP curation within the budget, and the upper end counts models within $\delta$ of the winner (Prop.~\ref{prop:floor}).}
+\caption{Possible winners $|P(\delta)|$ at curation budget $\delta$ (\% of benchmark weight). In a range $a$--$b$, $a$ models have a verified curation that removes at most $\delta$ and $b$ models are within $\delta$ of the winner (Prop.~\ref{prop:floor}). A single number means $a=b$.}
 \label{tab:plausible}
 \end{table}
 
-\paragraph{Possible winners.} Because the bound is nearly tight, the two ends of $P(\delta)$ are close (Table~\ref{tab:plausible}). On RewardBench, a pipeline that may have curated 1\% of the benchmark can only say that the best model is one of \OnePlausOneLo{}, and at 5\% one of \OnePlausFiveLo{}. RewardBench~2's winner is the only possible winner up to a 5\% budget.
+\paragraph{At a 1\% budget, \OnePlausOneLo{} RewardBench models could win.} Because the bound is nearly tight, the two ends of $P(\delta)$ are close (Table~\ref{tab:plausible}). On RewardBench, a pipeline that may have curated 1\% of the benchmark can only say that the best model is one of \OnePlausOneLo{}, and at 5\% one of \OnePlausFiveLo{}. RewardBench~2's winner is the only possible winner up to a 5\% budget.
 
 \begin{table}[t]
 \centering\small
 \resizebox{\columnwidth}{!}{\input{table_valcert}}
-\caption{Validation sets of $n$ items drawn in proportion to official weight (2{,}000 draws per $n$). ``all'': share of draws whose selected model is the full-benchmark winner. ``cert.'': the same share among draws whose top-two gap on the validation set exceeds 2 points (share of such draws in brackets). ``not'': the same share among the other draws.}
+\caption{Selection on random validation sets of $n$ items, drawn in proportion to official weight (2{,}000 draws per $n$). Each entry is the \% of draws that select the full-benchmark winner: over all draws (all), over draws whose top-two gap on the set exceeds 2 points (cert.; \% of draws in brackets), and over the remaining draws (not).}
 \label{tab:valcert}
 \end{table}
 
-\paragraph{Certificates on small validation sets.} In practice a pipeline scores candidates on a small validation set, where the certificate is the top-two gap on that set. Table~\ref{tab:valcert} draws such sets at random, so that each set's score is an unbiased estimate of the official score. On RewardBench, a 100-item set selects the full-benchmark winner in \OneValHundred\% of draws. With 200 items, the \OneValTwoHundredCertShare\% of selections certified at 2 points match it \OneValTwoHundredCert\% of the time, against \OneValTwoHundredUncert\% for the rest. On RewardBench~2, whose winner leads by \TwoCertGap{} points, most selections are certified and nearly all are correct. Using only the validation scores, the certificate separates selections a pipeline can trust from those it should not.
+\paragraph{The top-two gap flags unreliable validation-set selections.} In practice a pipeline scores candidates on a small validation set, where the certificate is the top-two gap on that set. Table~\ref{tab:valcert} draws such sets at random, so that each set's score is an unbiased estimate of the official score. On RewardBench, a 100-item set selects the full-benchmark winner in \OneValHundred\% of draws. With 200 items, the \OneValTwoHundredCertShare\% of selections certified at 2 points match it \OneValTwoHundredCert\% of the time, against \OneValTwoHundredUncert\% for the rest. On RewardBench~2, whose winner leads by \TwoCertGap{} points, most selections are certified and nearly all are correct. Using only the validation scores, the certificate separates selections a pipeline can trust from those it should not.
 
-\section{A Selection Protocol}
+\section{Protocol for Certified Selection}
 
 For an automated pipeline that selects an evaluator: (i) fix the validation items and record a hash of them before scoring any candidate, and log every filter applied to them; (ii) set a curation budget $\delta$, the share of the set that could have been dropped or filtered; (iii) report the certificates $g^\star$ and $k^\star$ with the selection, and accept the winner only if $g^\star>\delta$; (iv) otherwise, report the set of possible winners, bounded as above, instead of a single winner. The certificates take one pass over the score table, so the protocol needs no extra model calls.
 

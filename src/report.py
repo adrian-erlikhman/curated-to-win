@@ -176,11 +176,11 @@ def main():
         cs = np.array(s["strat"]["costs"]) * 100
         lim = max(g.max(), gs.max() if len(gs) else 0) * 1.05
         ax.plot([0, lim], [0, lim], color="0.6", lw=0.8, ls="--",
-                label="bound (= gap)")
+                label="Prop. 1 bound (y = x)")
         ax.scatter(gs, cs, s=9, color="#C1543A", label="section-preserving",
                    alpha=0.8, lw=0)
         ax.scatter(g, c, s=9, color="#1F3A5F", label="unconstrained", lw=0)
-        ax.set_xlabel("score gap to the leader (points)", fontsize=9)
+        ax.set_xlabel("official gap to the winner (points)", fontsize=9)
         ax.set_ylabel("share removed to crown (%)", fontsize=9)
         ax.set_title("RewardBench" + (" 2" if tag else ""), fontsize=10)
         ax.tick_params(labelsize=8)
