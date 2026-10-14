@@ -1,17 +1,21 @@
-% Every entry checked against the arXiv API on 2026-09-29.
+% Every entry checked against the arXiv API on 2026-09-29; venues checked against
+% ACL Anthology, PMLR, NeurIPS and arXiv journal references on 2026-10-13.
 
-@article{lambert2024rewardbench,
-  title   = {{RewardBench}: Evaluating Reward Models for Language Modeling},
-  author  = {Lambert, Nathan and Pyatkin, Valentina and Morrison, Jacob and Miranda, LJ and others},
-  journal = {arXiv preprint arXiv:2403.13787},
-  year    = {2024}
+@inproceedings{lambert2024rewardbench,
+  title     = {{RewardBench}: Evaluating Reward Models for Language Modeling},
+  author    = {Lambert, Nathan and Pyatkin, Valentina and Morrison, Jacob and Miranda, LJ and others},
+  booktitle = {Findings of the Association for Computational Linguistics: NAACL 2025},
+  pages     = {1755--1797},
+  year      = {2025},
+  url       = {https://aclanthology.org/2025.findings-naacl.96/}
 }
 
-@article{malik2025rewardbench2,
-  title   = {{RewardBench 2}: Advancing Reward Model Evaluation},
-  author  = {Malik, Saumya and Pyatkin, Valentina and Land, Sander and Morrison, Jacob and others},
-  journal = {arXiv preprint arXiv:2506.01937},
-  year    = {2025}
+@inproceedings{malik2025rewardbench2,
+  title     = {{RewardBench 2}: Advancing Reward Model Evaluation},
+  author    = {Malik, Saumya and Pyatkin, Valentina and Land, Sander and Morrison, Jacob and others},
+  booktitle = {The Fourteenth International Conference on Learning Representations (ICLR)},
+  year      = {2026},
+  url       = {https://arxiv.org/abs/2506.01937}
 }
 
 @article{dehghani2021lottery,
@@ -21,25 +25,31 @@
   year    = {2021}
 }
 
-@article{polo2024tiny,
-  title   = {{tinyBenchmarks}: Evaluating {LLMs} with Fewer Examples},
-  author  = {Maia Polo, Felipe and Weber, Lucas and Choshen, Leshem and Sun, Yuekai and others},
-  journal = {arXiv preprint arXiv:2402.14992},
-  year    = {2024}
+@inproceedings{polo2024tiny,
+  title     = {{tinyBenchmarks}: Evaluating {LLMs} with Fewer Examples},
+  author    = {Maia Polo, Felipe and Weber, Lucas and Choshen, Leshem and Sun, Yuekai and others},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2402.14992}
 }
 
-@article{zhang2024tradeoffs,
-  title   = {Inherent Trade-Offs between Diversity and Stability in Multi-Task Benchmarks},
-  author  = {Zhang, Guanhua and Hardt, Moritz},
-  journal = {arXiv preprint arXiv:2405.01719},
-  year    = {2024}
+@inproceedings{zhang2024tradeoffs,
+  title     = {Inherent Trade-Offs between Diversity and Stability in Multi-Task Benchmarks},
+  author    = {Zhang, Guanhua and Hardt, Moritz},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2405.01719}
 }
 
-@article{gao2022overoptimization,
-  title   = {Scaling Laws for Reward Model Overoptimization},
-  author  = {Gao, Leo and Schulman, John and Hilton, Jacob},
-  journal = {arXiv preprint arXiv:2210.10760},
-  year    = {2022}
+@inproceedings{gao2022overoptimization,
+  title     = {Scaling Laws for Reward Model Overoptimization},
+  author    = {Gao, Leo and Schulman, John and Hilton, Jacob},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
+  series    = {PMLR},
+  volume    = {202},
+  pages     = {10835--10866},
+  year      = {2023},
+  url       = {https://proceedings.mlr.press/v202/gao23h.html}
 }
 
 @article{lu2024aiscientist,
@@ -56,18 +66,20 @@
   year    = {2025}
 }
 
-@article{alzahrani2024targets,
-  title   = {When Benchmarks are Targets: Revealing the Sensitivity of Large Language Model Leaderboards},
-  author  = {Alzahrani, Norah and Alyahya, Hisham Abdullah and Alnumay, Yazeed and Alrashed, Sultan and others},
-  journal = {arXiv preprint arXiv:2402.01781},
-  year    = {2024}
+@inproceedings{alzahrani2024targets,
+  title     = {When Benchmarks are Targets: Revealing the Sensitivity of Large Language Model Leaderboards},
+  author    = {Alzahrani, Norah and Alyahya, Hisham Abdullah and Alnumay, Yazeed and Alrashed, Sultan and others},
+  booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2402.01781}
 }
 
-@article{zheng2023judging,
-  title   = {Judging {LLM}-as-a-Judge with {MT-Bench} and {Chatbot Arena}},
-  author  = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and others},
-  journal = {arXiv preprint arXiv:2306.05685},
-  year    = {2023}
+@inproceedings{zheng2023judging,
+  title     = {Judging {LLM}-as-a-Judge with {MT-Bench} and {Chatbot Arena}},
+  author    = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and others},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS), Datasets and Benchmarks Track},
+  year      = {2023},
+  url       = {https://arxiv.org/abs/2306.05685}
 }
 
 @article{madaan2024variance,
@@ -93,7 +105,23 @@
 
 @article{dubrovsky2025selective,
   title   = {Selective Adversarial Attacks on {LLM} Benchmarks},
-  author  = {Dubrovsky, Ivan and Orlova, Anastasia and Iov, Illarion and Gubina, Nina and Gureeva, Irena},
+  author  = {Dubrovsky, Ivan and Orlova, Anastasia and Iov, Illarion and Gubina, Nina and Gureeva, Irena and others},
   journal = {arXiv preprint arXiv:2510.13570},
   year    = {2025}
+}
+
+@article{broderick2020amip,
+  title   = {An Automatic Finite-Sample Robustness Metric: When Can Dropping a Little Data Make a Big Difference?},
+  author  = {Broderick, Tamara and Giordano, Ryan and Meager, Rachael},
+  journal = {arXiv preprint arXiv:2011.14999},
+  year    = {2020}
+}
+
+@inproceedings{steinhardt2017certified,
+  title     = {Certified Defenses for Data Poisoning Attacks},
+  author    = {Steinhardt, Jacob and Koh, Pang Wei and Liang, Percy},
+  booktitle = {Advances in Neural Information Processing Systems 30 (NeurIPS)},
+  pages     = {3517--3529},
+  year      = {2017},
+  url       = {https://arxiv.org/abs/1706.03691}
 }

@@ -79,7 +79,7 @@ def main():
         s = summarize(tag)
         figs[tag] = s
         mac(pre + "Models", s["n_models"])
-        mac(pre + "Items", N_ITEMS[tag])
+        mac(pre + "Items", "{:,}".format(N_ITEMS[tag]).replace(",", "{,}"))
         mac(pre + "SecondGap", pct(s["second"]["gap"]))
         mac(pre + "SecondCost", pct(s["second"]["cost"]))
         mac(pre + "SecondRemoved", s["second"]["removed"])

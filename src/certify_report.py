@@ -29,6 +29,10 @@ for key, P in (("rb1", "One"), ("rb2", "Two")):
         mac(P + "Val" + n + "CertShare", pc(c2["share_certified"]))
         mac(P + "Val" + n + "Cert", pc(c2["p_correct_certified"]))
         mac(P + "Val" + n + "Uncert", pc(c2["p_correct_uncertified"]))
+        for t, T in (("cert_1", "One"), ("cert_5", "Five")):   # threshold sweep, 1 and 5 points
+            mac(P + "Val" + n + "CertShare" + T, pc(r[t]["share_certified"]))
+            mac(P + "Val" + n + "Cert" + T, pc(r[t]["p_correct_certified"]))
+            mac(P + "Val" + n + "Uncert" + T, pc(r[t]["p_correct_uncertified"]))
 with open(os.path.join(PAPER, "numbers.tex"), "a") as fh:
     fh.write("\n".join(L) + "\n")
 
