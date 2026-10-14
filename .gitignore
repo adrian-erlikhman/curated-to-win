@@ -5,3 +5,4 @@ paper/*.bbl
 paper/*.blg
 paper/*.out
 __pycache__/
+reviews/

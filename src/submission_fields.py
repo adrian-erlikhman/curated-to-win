@@ -5,14 +5,13 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-num = dict(re.findall(r"\\newcommand\{\\(\w+)\}\{([^}]*)\}",
-                      open(os.path.join(ROOT, "paper", "numbers.tex")).read()))
+num = dict(re.findall(r"^\\newcommand\{\\(\w+)\}\{(.*)\}\s*$", open(os.path.join(ROOT, "paper", "numbers.tex")).read(), re.M))
 tex = open(os.path.join(ROOT, "paper", "main.tex"), encoding="utf-8").read()
 title = re.search(r"\\title\{(.*?)\}\n", tex, re.S).group(1).replace("\\\\", " ").strip()
 ab = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", tex, re.S).group(1).strip()
 ab = re.sub(r"\\(?:emph|textit|textbf)\{([^}]*)\}", r"\1", ab)
 ab = re.sub(r"\\(\w+)(\{\})?", lambda m: num.get(m.group(1), m.group(0)), ab)
-for a, b in (("\\%", "%"), ("$\\times$", "x"), ("~", " "), ("---", "-"), ("--", "-"), ("$", "")):
+for a, b in (("{,}", ","), ("\\%", "%"), ("$\\times$", "x"), ("~", " "), ("---", "-"), ("--", "-"), ("$", "")):
     ab = ab.replace(a, b)
 out = os.path.join(os.path.expanduser("~"), "Downloads", "ARRSI-submission-fields.txt")
 open(out, "w", encoding="utf-8").write(
