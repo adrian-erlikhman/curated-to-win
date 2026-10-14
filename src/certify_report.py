@@ -14,6 +14,14 @@ def mac(k, v):
 
 
 pc = lambda x: "--" if x is None else "%.0f" % (100 * x)
+DRAWS = 2000                                       # draws per n in certify.py
+
+
+def wilson(p, n, z=1.96):
+    d = 1 + z * z / n
+    mid = (p + z * z / (2 * n)) / d
+    half = z * ((p * (1 - p) / n + z * z / (4 * n * n)) ** 0.5) / d
+    return mid - half, mid + half
 for key, P in (("rb1", "One"), ("rb2", "Two")):
     v = c[key]
     mac(P + "CertItems", v["item_cert"]); mac(P + "CertItemsSafe", v["item_cert"] - 1)
@@ -29,6 +37,14 @@ for key, P in (("rb1", "One"), ("rb2", "Two")):
         mac(P + "Val" + n + "CertShare", pc(c2["share_certified"]))
         mac(P + "Val" + n + "Cert", pc(c2["p_correct_certified"]))
         mac(P + "Val" + n + "Uncert", pc(c2["p_correct_uncertified"]))
+        if n == "TwoHundred":                       # Wilson 95% intervals, 2,000 draws per n
+            nc = round(c2["share_certified"] * DRAWS)
+            for nm, ph, m in (("Cert", c2["p_correct_certified"], nc),
+                              ("Uncert", c2["p_correct_uncertified"], DRAWS - nc)):
+                lo, hi = wilson(ph, m)
+                mac(P + "Val" + n + nm + "Lo", "%.0f" % (100 * lo))
+                mac(P + "Val" + n + nm + "Hi", "%.0f" % (100 * hi))
+            mac(P + "Val" + n + "CertCount", nc)
         for t, T in (("cert_1", "One"), ("cert_5", "Five")):   # threshold sweep, 1 and 5 points
             mac(P + "Val" + n + "CertShare" + T, pc(r[t]["share_certified"]))
             mac(P + "Val" + n + "Cert" + T, pc(r[t]["p_correct_certified"]))
