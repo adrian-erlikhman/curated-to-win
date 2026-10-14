@@ -167,7 +167,9 @@ def main():
     open(os.path.join(PAPER, "table_benign.tex"), "w").write("\n".join(tex) + "\n")
 
     # figure: removal needed vs score gap, both benchmarks
-    fig, axes = plt.subplots(1, len(figs), figsize=(3.4 * len(figs), 2.5),
+    plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "DejaVu Serif"],
+                         "mathtext.fontset": "stix", "pdf.fonttype": 42})
+    fig, axes = plt.subplots(1, len(figs), figsize=(3.4 * len(figs), 2.6),
                              squeeze=False)
     for ax, (tag, s) in zip(axes[0], figs.items()):
         g = np.array(s["free"]["gaps"]) * 100
@@ -175,18 +177,25 @@ def main():
         gs = np.array(s["strat"]["gaps"]) * 100
         cs = np.array(s["strat"]["costs"]) * 100
         lim = max(g.max(), gs.max() if len(gs) else 0) * 1.05
-        ax.plot([0, lim], [0, lim], color="0.6", lw=0.8, ls="--",
-                label="Prop. 1 bound (y = x)")
-        ax.scatter(gs, cs, s=9, color="#C1543A", label="section-preserving",
-                   alpha=0.8, lw=0)
-        ax.scatter(g, c, s=9, color="#1F3A5F", label="unconstrained", lw=0)
-        ax.set_xlabel("official gap to the winner (points)", fontsize=9)
-        ax.set_ylabel("share removed to crown (%)", fontsize=9)
-        ax.set_title("RewardBench" + (" 2" if tag else ""), fontsize=10)
-        ax.tick_params(labelsize=8)
-        ax.set_xlim(0, lim)
-        ax.set_ylim(0, None)
-    axes[0][0].legend(fontsize=8, frameon=False, loc="upper left")
+        # inset: the 20 models nearest the winner (ranks 2-20)
+        zoom = g[18] * 1.1 if len(g) > 18 else lim
+        inset = ax.inset_axes([0.70, 0.07, 0.28, 0.26] if not tag else [0.62, 0.07, 0.35, 0.33])
+        for a, big in ((ax, True), (inset, False)):
+            top = lim if big else zoom
+            a.plot([0, top], [0, top], color="0.55", lw=0.8, ls="--",
+                   label="Prop. 1 bound ($y=x$)")
+            a.scatter(gs, cs, s=10 if big else 8, color="#C1543A", label="section-preserving",
+                      alpha=0.8, lw=0)
+            a.scatter(g, c, s=10 if big else 8, color="#1F3A5F", label="unconstrained", lw=0)
+            a.set_xlim(0, top)
+            a.set_ylim(0, None if big else zoom * 2.4)
+        inset.tick_params(labelsize=7, length=2, pad=1)
+        inset.text(0.05, 0.80, "top 20", transform=inset.transAxes, fontsize=8)
+        ax.set_xlabel("official gap to the winner (points)", fontsize=10)
+        ax.set_ylabel("share removed to crown (%)", fontsize=10)
+        ax.set_title("RewardBench" + (" 2" if tag else ""), fontsize=11)
+        ax.tick_params(labelsize=9)
+    axes[0][0].legend(fontsize=9, frameon=False, loc="upper left")
     fig.tight_layout()
     fig.savefig(os.path.join(PAPER, "fig_cost.pdf"))
     print(open(os.path.join(PAPER, "numbers.tex")).read())
