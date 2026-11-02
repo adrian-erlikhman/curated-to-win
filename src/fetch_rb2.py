@@ -27,7 +27,18 @@ def get(path):
               open(dst, "w"))
     return path, "ok"
 
-rows = json.load(open(os.path.join(ROOT, "data", "filelist_rb2.json")))
+def file_list(repo, cache):
+    """[path, size] of every per-item result file, cached in data/."""
+    if not os.path.exists(cache):
+        from huggingface_hub import HfApi
+        tree = HfApi().list_repo_tree(repo, path_in_repo="eval-set-scores",
+                                      recursive=True, repo_type="dataset")
+        rows = [[f.path, f.size] for f in tree if f.path.endswith(".json")]
+        json.dump(rows, open(cache, "w"))
+    return json.load(open(cache))
+
+rows = file_list("allenai/reward-bench-2-results",
+                 os.path.join(ROOT, "data", "filelist_rb2.json"))
 with ThreadPoolExecutor(8) as ex:
     for p, s in ex.map(get, [p for p, _ in rows]):
         print(s, p, flush=True)

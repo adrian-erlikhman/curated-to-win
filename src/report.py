@@ -15,14 +15,10 @@ N_ITEMS = {"": 2985, "rb2_": 1753}
 
 
 def load_rows(tag):
-    """Crowning results, with the unconstrained cost taken as the better of the
-    two searches: a verified section-preserving subset is also a valid
-    unconstrained one, and both searches are heuristic (bisection + rounding)."""
-    rows = json.load(open(os.path.join(RES, "crown_%sall.json" % tag)))
-    for r in rows:
-        if r["strat"] is not None and (r["free"] is None or r["strat"]["f"] > r["free"]["f"]):
-            r["free"] = dict(r["strat"])
-    return rows
+    """Crowning results. The two searches stay separate: section-preserving
+    subsets are verified with weights rescaled within each section, not with
+    the proportional rescoring S^K, so they do not count as unconstrained."""
+    return json.load(open(os.path.join(RES, "crown_%sall.json" % tag)))
 
 
 def summarize(tag):
@@ -132,6 +128,12 @@ def main():
     # table: the leader and the next seven models on RewardBench
     rows = load_rows("")
     top = rows[0]["official"]
+
+    # an LLM judge named in the text
+    judge = next(r for r in rows if r["model"] == "openai/gpt-4o-2024-08-06")
+    mac("OneJudgeRank", judge["official_rank"])
+    mac("OneJudgeCost", pct(1 - judge["free"]["f"], 2))
+
     tex = ["\\begin{tabular}{lrrrrr}", "\\toprule",
            "& & & \\multicolumn{2}{c}{Removed to crown} & \\\\",
            "\\cmidrule(lr){4-5}",
@@ -167,7 +169,7 @@ def main():
     open(os.path.join(PAPER, "table_benign.tex"), "w").write("\n".join(tex) + "\n")
 
     # figure: removal needed vs score gap, both benchmarks
-    plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "DejaVu Serif"],
+    plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "Liberation Serif", "DejaVu Serif"],
                          "mathtext.fontset": "stix", "pdf.fonttype": 42})
     fig, axes = plt.subplots(1, len(figs), figsize=(3.4 * len(figs), 2.6),
                              squeeze=False)

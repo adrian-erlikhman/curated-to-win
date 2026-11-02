@@ -28,12 +28,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RES = os.path.join(ROOT, "results")
 
 
-def best_rows(tag):
-    rows = json.load(open(os.path.join(RES, "crown_%sall.json" % tag)))
-    for r in rows:
-        if r["strat"] is not None and (r["free"] is None or r["strat"]["f"] > r["free"]["f"]):
-            r["free"] = dict(r["strat"])
-    return rows
+def crown_rows(tag):
+    return json.load(open(os.path.join(RES, "crown_%sall.json" % tag)))
 
 
 def item_certificate(R, w0, S, lead):
@@ -49,17 +45,32 @@ def item_certificate(R, w0, S, lead):
     return counts
 
 
+def rescore_after_removal(R, w0, lead, c, k):
+    """Remove the k items that contribute most to lead's gap over c, rescore
+    every model on the rest with the relative weights unchanged, and return
+    the new leader (Prop. 3 says this is c when c is the runner-up)."""
+    removed = np.argsort(-(w0 * (R[lead] - R[c])))[:k]
+    kept = np.ones(len(w0), bool)
+    kept[removed] = False
+    return int(np.argmax(R[:, kept] @ w0[kept]))
+
+
 def run(tag, d, draws=2000, seed=20260930):
     R, w0, names = d["R"], d["w0"], d["names"]
     S = R @ w0
     order = np.argsort(-S)
     lead, second = int(order[0]), int(order[1])
-    rows = best_rows(tag)
+    # Prop. 3's hypotheses for the two top models
+    assert np.isin(R[[lead, second]], (0.0, 1.0)).all(), "top two must have 0/1 scores"
+    assert S[second] > S[order[2]], "runner-up must be unique"
+    rows = crown_rows(tag)
     cost = {r["model"]: (1 - r["free"]["f"]) if r["free"] else None for r in rows}
     items = {r["model"]: (R.shape[1] - r["free"]["n_items"]) if r["free"] else None for r in rows}
     ic = item_certificate(R, w0, S, lead)
     k_min = min(v for v in ic.values() if v is not None)
     c_min = min(ic, key=lambda c: ic[c] if ic[c] is not None else 1e9)
+    assert rescore_after_removal(R, w0, lead, c_min, k_min) == c_min, \
+        "removing the k* items must make the challenger the new winner"
     lp_min = min(cost[names[c]] for c in range(len(S)) if c != lead and cost[names[c]] is not None)
     lp_items = min(items[names[c]] for c in range(len(S)) if c != lead and items[names[c]] is not None)
 

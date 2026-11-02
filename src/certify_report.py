@@ -2,6 +2,10 @@
 paper/table_plausible.tex and paper/table_valcert.tex. Run after report.py."""
 import json
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from load import EXAMPLE_COUNTS, SECTIONS  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RES, PAPER = os.path.join(ROOT, "results"), os.path.join(ROOT, "paper")
@@ -49,6 +53,12 @@ for key, P in (("rb1", "One"), ("rb2", "Two")):
             mac(P + "Val" + n + "CertShare" + T, pc(r[t]["share_certified"]))
             mac(P + "Val" + n + "Cert" + T, pc(r[t]["p_correct_certified"]))
             mac(P + "Val" + n + "Uncert" + T, pc(r[t]["p_correct_uncertified"]))
+
+# Prop. 3 on RewardBench: the heaviest item is one Chat item (the smallest section)
+w_max = 0.25 / sum(EXAMPLE_COUNTS[s] for s in SECTIONS["Chat"])
+mac("OneCertWmax", "%.2f" % (100 * w_max))
+mac("OneCertTightHi", "%.2f" % (100 * (c["rb1"]["gap"] + w_max)))
+
 with open(os.path.join(PAPER, "numbers.tex"), "a") as fh:
     fh.write("\n".join(L) + "\n")
 
