@@ -6,3 +6,4 @@ paper/*.blg
 paper/*.out
 __pycache__/
 reviews/
+*.zip

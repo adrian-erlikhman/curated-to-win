@@ -1,0 +1,1476 @@
+{
+ "rb1": {
+  "leader": "infly/INF-ORM-Llama3.1-70B",
+  "runner_up": "nicolinho/QRM-Gemma-2-27B",
+  "k_paper": 12,
+  "paper_set": {
+   "k": 12,
+   "items": [
+    {
+     "subset": "alpacaeval-hard",
+     "position": 126,
+     "hash_chosen": "f847827eacff"
+    },
+    {
+     "subset": "alpacaeval-hard",
+     "position": 166,
+     "hash_chosen": "80c261e5e65c"
+    },
+    {
+     "subset": "alpacaeval-length",
+     "position": 198,
+     "hash_chosen": "8338e31a25a4"
+    },
+    {
+     "subset": "alpacaeval-length",
+     "position": 286,
+     "hash_chosen": "0a95f3b50ace"
+    },
+    {
+     "subset": "mt-bench-hard",
+     "position": 367,
+     "hash_chosen": "be39dabc14af"
+    },
+    {
+     "subset": "mt-bench-hard",
+     "position": 382,
+     "hash_chosen": "dbbc66d5a403"
+    },
+    {
+     "subset": "llmbar-natural",
+     "position": 398,
+     "hash_chosen": "76d41f719cb2"
+    },
+    {
+     "subset": "llmbar-natural",
+     "position": 464,
+     "hash_chosen": "e7b54d46397a"
+    },
+    {
+     "subset": "llmbar-adver-neighbor",
+     "position": 521,
+     "hash_chosen": "923b7f8d1b43"
+    },
+    {
+     "subset": "llmbar-adver-neighbor",
+     "position": 535,
+     "hash_chosen": "4792ef25a73e"
+    },
+    {
+     "subset": "llmbar-adver-neighbor",
+     "position": 545,
+     "hash_chosen": "1c0bf6f6ba8d"
+    },
+    {
+     "subset": "llmbar-adver-neighbor",
+     "position": 578,
+     "hash_chosen": "4ff493e30ea3"
+    }
+   ],
+   "first_official": "nicolinho/QRM-Gemma-2-27B",
+   "official_scores": {
+    "nicolinho/QRM-Gemma-2-27B": 95.1146,
+    "infly/INF-ORM-Llama3.1-70B": 95.0484,
+    "Skywork/Skywork-Reward-Gemma-2-27B-v0.2": 94.8016
+   }
+  },
+  "k_official": 11,
+  "official_best": [
+   {
+    "challenger": "nicolinho/QRM-Gemma-2-27B",
+    "k": 11,
+    "per_subset": {
+     "mt-bench-hard": 2,
+     "llmbar-adver-manual": 4,
+     "llmbar-adver-GPTInst": 1,
+     "alpacaeval-length": 2,
+     "alpacaeval-hard": 2
+    },
+    "first_after": "nicolinho/QRM-Gemma-2-27B",
+    "items": [
+     {
+      "subset": "alpacaeval-hard",
+      "position": 126,
+      "hash_chosen": "f847827eacff"
+     },
+     {
+      "subset": "alpacaeval-hard",
+      "position": 166,
+      "hash_chosen": "80c261e5e65c"
+     },
+     {
+      "subset": "alpacaeval-length",
+      "position": 198,
+      "hash_chosen": "8338e31a25a4"
+     },
+     {
+      "subset": "alpacaeval-length",
+      "position": 286,
+      "hash_chosen": "0a95f3b50ace"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 367,
+      "hash_chosen": "be39dabc14af"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 382,
+      "hash_chosen": "dbbc66d5a403"
+     },
+     {
+      "subset": "llmbar-adver-GPTInst",
+      "position": 701,
+      "hash_chosen": "c513bc295a43"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 789,
+      "hash_chosen": "2997712caf31"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 792,
+      "hash_chosen": "efd77c7aea84"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 793,
+      "hash_chosen": "e13681f394b8"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 803,
+      "hash_chosen": "c6ba56a2627d"
+     }
+    ],
+    "official_scores": {
+     "infly/INF-ORM-Llama3.1-70B": 95.0339,
+     "nicolinho/QRM-Gemma-2-27B": 95.0514
+    }
+   },
+   {
+    "challenger": "Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+    "k": 14,
+    "per_subset": {
+     "mt-bench-med": 1,
+     "mt-bench-hard": 4,
+     "llmbar-adver-manual": 3,
+     "llmbar-adver-GPTInst": 1,
+     "alpacaeval-length": 2,
+     "alpacaeval-hard": 2,
+     "alpacaeval-easy": 1
+    },
+    "first_after": "Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+    "items": [
+     {
+      "subset": "alpacaeval-easy",
+      "position": 24,
+      "hash_chosen": "d77e0802a308"
+     },
+     {
+      "subset": "alpacaeval-hard",
+      "position": 126,
+      "hash_chosen": "f847827eacff"
+     },
+     {
+      "subset": "alpacaeval-hard",
+      "position": 166,
+      "hash_chosen": "80c261e5e65c"
+     },
+     {
+      "subset": "alpacaeval-length",
+      "position": 227,
+      "hash_chosen": "cd0f4ef4ef84"
+     },
+     {
+      "subset": "alpacaeval-length",
+      "position": 286,
+      "hash_chosen": "0a95f3b50ace"
+     },
+     {
+      "subset": "mt-bench-med",
+      "position": 344,
+      "hash_chosen": "28ffcf885f4b"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 374,
+      "hash_chosen": "148f14a43867"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 380,
+      "hash_chosen": "b539b2f97e1a"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 382,
+      "hash_chosen": "dbbc66d5a403"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 389,
+      "hash_chosen": "36a1de02ceab"
+     },
+     {
+      "subset": "llmbar-adver-GPTInst",
+      "position": 637,
+      "hash_chosen": "a4f47950cbd7"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 789,
+      "hash_chosen": "2997712caf31"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 793,
+      "hash_chosen": "e13681f394b8"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 805,
+      "hash_chosen": "3b37e081cfa5"
+     }
+    ],
+    "official_scores": {
+     "infly/INF-ORM-Llama3.1-70B": 95.0289,
+     "Skywork/Skywork-Reward-Gemma-2-27B-v0.2": 95.0713
+    }
+   },
+   {
+    "challenger": "Skywork/Skywork-Reward-Gemma-2-27B",
+    "k": 22,
+    "per_subset": {
+     "mt-bench-med": 1,
+     "mt-bench-hard": 1,
+     "llmbar-natural": 2,
+     "llmbar-adver-neighbor": 6,
+     "llmbar-adver-manual": 4,
+     "llmbar-adver-GPTOut": 2,
+     "llmbar-adver-GPTInst": 1,
+     "alpacaeval-length": 2,
+     "alpacaeval-hard": 1,
+     "alpacaeval-easy": 2
+    },
+    "first_after": "nicolinho/QRM-Gemma-2-27B",
+    "items": [
+     {
+      "subset": "alpacaeval-easy",
+      "position": 52,
+      "hash_chosen": "169412d1f1f0"
+     },
+     {
+      "subset": "alpacaeval-easy",
+      "position": 58,
+      "hash_chosen": "d5e5484168ab"
+     },
+     {
+      "subset": "alpacaeval-hard",
+      "position": 126,
+      "hash_chosen": "f847827eacff"
+     },
+     {
+      "subset": "alpacaeval-length",
+      "position": 198,
+      "hash_chosen": "8338e31a25a4"
+     },
+     {
+      "subset": "alpacaeval-length",
+      "position": 286,
+      "hash_chosen": "0a95f3b50ace"
+     },
+     {
+      "subset": "mt-bench-med",
+      "position": 344,
+      "hash_chosen": "28ffcf885f4b"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 383,
+      "hash_chosen": "d24496eacf8c"
+     },
+     {
+      "subset": "llmbar-natural",
+      "position": 407,
+      "hash_chosen": "cf28cf4480e0"
+     },
+     {
+      "subset": "llmbar-natural",
+      "position": 418,
+      "hash_chosen": "3095c5306b0f"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 521,
+      "hash_chosen": "923b7f8d1b43"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 545,
+      "hash_chosen": "1c0bf6f6ba8d"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 578,
+      "hash_chosen": "4ff493e30ea3"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 613,
+      "hash_chosen": "c5f9b8fe5e19"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 619,
+      "hash_chosen": "64099d30d11b"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 628,
+      "hash_chosen": "0c6fabeb8392"
+     },
+     {
+      "subset": "llmbar-adver-GPTInst",
+      "position": 714,
+      "hash_chosen": "b54367561f4e"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 725,
+      "hash_chosen": "ca29dcb3d84d"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 758,
+      "hash_chosen": "4120e07c2c6a"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 779,
+      "hash_chosen": "86f20541c475"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 796,
+      "hash_chosen": "95df5fb88882"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 803,
+      "hash_chosen": "c6ba56a2627d"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 805,
+      "hash_chosen": "3b37e081cfa5"
+     }
+    ],
+    "official_scores": {
+     "infly/INF-ORM-Llama3.1-70B": 94.9884,
+     "Skywork/Skywork-Reward-Gemma-2-27B": 95.0213
+    }
+   },
+   {
+    "challenger": "nicolinho/QRM-Llama3.1-8B-v2",
+    "k": 33,
+    "per_subset": {
+     "mt-bench-hard": 3,
+     "llmbar-adver-neighbor": 10,
+     "llmbar-adver-manual": 6,
+     "llmbar-adver-GPTOut": 6,
+     "llmbar-adver-GPTInst": 1,
+     "alpacaeval-length": 2,
+     "alpacaeval-hard": 2,
+     "alpacaeval-easy": 3
+    },
+    "first_after": "nicolinho/QRM-Llama3.1-8B-v2",
+    "items": [
+     {
+      "subset": "alpacaeval-easy",
+      "position": 53,
+      "hash_chosen": "5a23b640925b"
+     },
+     {
+      "subset": "alpacaeval-easy",
+      "position": 61,
+      "hash_chosen": "8755cfb5c2ff"
+     },
+     {
+      "subset": "alpacaeval-easy",
+      "position": 73,
+      "hash_chosen": "cb524c1a8195"
+     },
+     {
+      "subset": "alpacaeval-hard",
+      "position": 113,
+      "hash_chosen": "825b09173091"
+     },
+     {
+      "subset": "alpacaeval-hard",
+      "position": 126,
+      "hash_chosen": "f847827eacff"
+     },
+     {
+      "subset": "alpacaeval-length",
+      "position": 224,
+      "hash_chosen": "22c529ae1b78"
+     },
+     {
+      "subset": "alpacaeval-length",
+      "position": 252,
+      "hash_chosen": "a5737d8d3129"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 363,
+      "hash_chosen": "9576cae08384"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 365,
+      "hash_chosen": "8370b006752d"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 386,
+      "hash_chosen": "a02b483e26dd"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 500,
+      "hash_chosen": "a7b6a6f055ae"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 501,
+      "hash_chosen": "ad8e1b463489"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 535,
+      "hash_chosen": "4792ef25a73e"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 567,
+      "hash_chosen": "166cc9b8efeb"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 575,
+      "hash_chosen": "643914a74d16"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 577,
+      "hash_chosen": "478b68771c0b"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 579,
+      "hash_chosen": "d3ea099e0e9f"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 619,
+      "hash_chosen": "64099d30d11b"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 627,
+      "hash_chosen": "6268858ac108"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 628,
+      "hash_chosen": "0c6fabeb8392"
+     },
+     {
+      "subset": "llmbar-adver-GPTInst",
+      "position": 649,
+      "hash_chosen": "758ca607077d"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 732,
+      "hash_chosen": "8857d54381b4"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 740,
+      "hash_chosen": "af3005b17f8e"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 746,
+      "hash_chosen": "63fe81a4f135"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 751,
+      "hash_chosen": "bc339551da5f"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 758,
+      "hash_chosen": "4120e07c2c6a"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 761,
+      "hash_chosen": "407e4b2fa0ff"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 779,
+      "hash_chosen": "86f20541c475"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 787,
+      "hash_chosen": "5542d1577ac0"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 790,
+      "hash_chosen": "5d90638f7c1d"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 795,
+      "hash_chosen": "d7de87eb3760"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 803,
+      "hash_chosen": "c6ba56a2627d"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 807,
+      "hash_chosen": "3ca5cec6f2d0"
+     }
+    ],
+    "official_scores": {
+     "infly/INF-ORM-Llama3.1-70B": 94.9062,
+     "nicolinho/QRM-Llama3.1-8B-v2": 94.91
+    }
+   },
+   {
+    "challenger": "Skywork/Skywork-Reward-Llama-3.1-8B-v0.2",
+    "k": 33,
+    "per_subset": {
+     "mt-bench-hard": 2,
+     "llmbar-natural": 2,
+     "llmbar-adver-neighbor": 7,
+     "llmbar-adver-manual": 5,
+     "llmbar-adver-GPTOut": 7,
+     "llmbar-adver-GPTInst": 1,
+     "alpacaeval-length": 1,
+     "alpacaeval-hard": 3,
+     "alpacaeval-easy": 5
+    },
+    "first_after": "Skywork/Skywork-Reward-Llama-3.1-8B-v0.2",
+    "items": [
+     {
+      "subset": "alpacaeval-easy",
+      "position": 23,
+      "hash_chosen": "69625786d171"
+     },
+     {
+      "subset": "alpacaeval-easy",
+      "position": 24,
+      "hash_chosen": "d77e0802a308"
+     },
+     {
+      "subset": "alpacaeval-easy",
+      "position": 61,
+      "hash_chosen": "8755cfb5c2ff"
+     },
+     {
+      "subset": "alpacaeval-easy",
+      "position": 67,
+      "hash_chosen": "3aa800ecafb5"
+     },
+     {
+      "subset": "alpacaeval-easy",
+      "position": 73,
+      "hash_chosen": "cb524c1a8195"
+     },
+     {
+      "subset": "alpacaeval-hard",
+      "position": 126,
+      "hash_chosen": "f847827eacff"
+     },
+     {
+      "subset": "alpacaeval-hard",
+      "position": 161,
+      "hash_chosen": "0dc1647e46af"
+     },
+     {
+      "subset": "alpacaeval-hard",
+      "position": 186,
+      "hash_chosen": "751de4f437fe"
+     },
+     {
+      "subset": "alpacaeval-length",
+      "position": 198,
+      "hash_chosen": "8338e31a25a4"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 365,
+      "hash_chosen": "8370b006752d"
+     },
+     {
+      "subset": "mt-bench-hard",
+      "position": 386,
+      "hash_chosen": "a02b483e26dd"
+     },
+     {
+      "subset": "llmbar-natural",
+      "position": 398,
+      "hash_chosen": "76d41f719cb2"
+     },
+     {
+      "subset": "llmbar-natural",
+      "position": 407,
+      "hash_chosen": "cf28cf4480e0"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 501,
+      "hash_chosen": "ad8e1b463489"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 536,
+      "hash_chosen": "b26e39e687a6"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 539,
+      "hash_chosen": "d31a166acbeb"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 571,
+      "hash_chosen": "ece7ff02eac8"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 575,
+      "hash_chosen": "643914a74d16"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 613,
+      "hash_chosen": "c5f9b8fe5e19"
+     },
+     {
+      "subset": "llmbar-adver-neighbor",
+      "position": 619,
+      "hash_chosen": "64099d30d11b"
+     },
+     {
+      "subset": "llmbar-adver-GPTInst",
+      "position": 687,
+      "hash_chosen": "d3d2ec273116"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 732,
+      "hash_chosen": "8857d54381b4"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 740,
+      "hash_chosen": "af3005b17f8e"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 746,
+      "hash_chosen": "63fe81a4f135"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 751,
+      "hash_chosen": "bc339551da5f"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 754,
+      "hash_chosen": "46b3b660dbbc"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 758,
+      "hash_chosen": "4120e07c2c6a"
+     },
+     {
+      "subset": "llmbar-adver-GPTOut",
+      "position": 761,
+      "hash_chosen": "407e4b2fa0ff"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 779,
+      "hash_chosen": "86f20541c475"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 790,
+      "hash_chosen": "5d90638f7c1d"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 803,
+      "hash_chosen": "c6ba56a2627d"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 805,
+      "hash_chosen": "3b37e081cfa5"
+     },
+     {
+      "subset": "llmbar-adver-manual",
+      "position": 807,
+      "hash_chosen": "3ca5cec6f2d0"
+     }
+    ],
+    "official_scores": {
+     "infly/INF-ORM-Llama3.1-70B": 94.9306,
+     "Skywork/Skywork-Reward-Llama-3.1-8B-v0.2": 94.9482
+    }
+   }
+  ]
+ },
+ "rb2": {
+  "leader": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+  "runner_up": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+  "k_paper": 43,
+  "paper_set": {
+   "k": 43,
+   "items": [
+    {
+     "subset": "Precise IF",
+     "id": "0"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "1"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "2"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "490"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "497"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "501"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "504"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "515"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "516"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "517"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "528"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "529"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "534"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "536"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "544"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "545"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "549"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "551"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "556"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "562"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "564"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "575"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "577"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "581"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "595"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "596"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "599"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "601"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "604"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "607"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "609"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "614"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "616"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "619"
+    },
+    {
+     "subset": "Precise IF",
+     "id": "622"
+    },
+    {
+     "subset": "Math",
+     "id": "14"
+    },
+    {
+     "subset": "Math",
+     "id": "668"
+    },
+    {
+     "subset": "Math",
+     "id": "679"
+    },
+    {
+     "subset": "Math",
+     "id": "688"
+    },
+    {
+     "subset": "Math",
+     "id": "689"
+    },
+    {
+     "subset": "Math",
+     "id": "698"
+    },
+    {
+     "subset": "Math",
+     "id": "706"
+    },
+    {
+     "subset": "Math",
+     "id": "710"
+    }
+   ],
+   "first_official": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+   "official_scores": {
+    "Skywork/Skywork-Reward-V2-Qwen3-8B": 83.0085,
+    "Skywork/Skywork-Reward-V2-Llama-3.1-8B": 82.6306,
+    "Skywork/Skywork-Reward-V2-Qwen3-4B": 78.9772
+   }
+  },
+  "k_official": 40,
+  "official_best": [
+   {
+    "challenger": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+    "k": 40,
+    "per_subset": {
+     "Precise IF": 35,
+     "Math": 5
+    },
+    "first_after": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+    "items": [
+     {
+      "subset": "Math",
+      "id": "14"
+     },
+     {
+      "subset": "Math",
+      "id": "668"
+     },
+     {
+      "subset": "Math",
+      "id": "679"
+     },
+     {
+      "subset": "Math",
+      "id": "688"
+     },
+     {
+      "subset": "Math",
+      "id": "689"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "0"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "1"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "2"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "490"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "497"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "501"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "504"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "515"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "516"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "517"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "528"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "529"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "534"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "536"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "544"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "545"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "549"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "551"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "556"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "562"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "564"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "575"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "577"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "581"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "595"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "596"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "599"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "601"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "604"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "607"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "609"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "614"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "616"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "619"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "622"
+     }
+    ],
+    "official_scores": {
+     "Skywork/Skywork-Reward-V2-Llama-3.1-8B": 82.7096,
+     "Skywork/Skywork-Reward-V2-Qwen3-8B": 82.7369
+    }
+   },
+   {
+    "challenger": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+    "k": 58,
+    "per_subset": {
+     "Precise IF": 43,
+     "Math": 15
+    },
+    "first_after": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+    "items": [
+     {
+      "subset": "Math",
+      "id": "14"
+     },
+     {
+      "subset": "Math",
+      "id": "655"
+     },
+     {
+      "subset": "Math",
+      "id": "668"
+     },
+     {
+      "subset": "Math",
+      "id": "679"
+     },
+     {
+      "subset": "Math",
+      "id": "688"
+     },
+     {
+      "subset": "Math",
+      "id": "689"
+     },
+     {
+      "subset": "Math",
+      "id": "694"
+     },
+     {
+      "subset": "Math",
+      "id": "698"
+     },
+     {
+      "subset": "Math",
+      "id": "700"
+     },
+     {
+      "subset": "Math",
+      "id": "706"
+     },
+     {
+      "subset": "Math",
+      "id": "710"
+     },
+     {
+      "subset": "Math",
+      "id": "719"
+     },
+     {
+      "subset": "Math",
+      "id": "721"
+     },
+     {
+      "subset": "Math",
+      "id": "722"
+     },
+     {
+      "subset": "Math",
+      "id": "725"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "0"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "1"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "2"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "490"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "492"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "497"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "498"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "501"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "504"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "508"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "515"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "516"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "517"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "521"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "528"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "529"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "530"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "535"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "536"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "537"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "539"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "544"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "545"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "551"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "556"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "560"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "562"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "563"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "564"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "565"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "575"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "579"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "581"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "594"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "595"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "596"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "603"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "607"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "614"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "618"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "622"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "625"
+     },
+     {
+      "subset": "Precise IF",
+      "id": "7"
+     }
+    ],
+    "official_scores": {
+     "Skywork/Skywork-Reward-V2-Llama-3.1-8B": 81.8446,
+     "Skywork/Skywork-Reward-V2-Qwen3-4B": 81.8649
+    }
+   }
+  ]
+ },
+ "rb2_ties": {
+  "rows": [
+   {
+    "model": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+    "ours": 84.72546325230087,
+    "published": {
+     "Factuality": 84.63157894736842,
+     "Precise IF": 66.25,
+     "Math": 77.59562841530054,
+     "Safety": 96.66666666666667,
+     "Focus": 98.38383838383838,
+     "Ties": 81.23904054919743
+    },
+    "with_ties": 84.12779216039524
+   },
+   {
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+    "ours": 79.50406871464509,
+    "published": {
+     "Factuality": 79.89473684210526,
+     "Precise IF": 50.0,
+     "Math": 77.04918032786885,
+     "Safety": 94.0,
+     "Focus": 96.36363636363636,
+     "Ties": 72.93703022757848
+    },
+    "with_ties": 78.37409729353149
+   },
+   {
+    "model": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+    "ours": 77.15776084483115,
+    "published": {
+     "Factuality": 77.36842105263158,
+     "Precise IF": 46.25,
+     "Math": 73.224043715847,
+     "Safety": 92.22222222222223,
+     "Focus": 96.56565656565657,
+     "Ties": 67.43100904046747
+    },
+    "with_ties": 75.51022543280413
+   },
+   {
+    "model": "Skywork/Skywork-Reward-V2-Llama-3.2-3B",
+    "ours": 76.13075079189566,
+    "published": {
+     "Factuality": 76.21052631578948,
+     "Precise IF": 45.625,
+     "Math": 69.39890710382514,
+     "Safety": 93.11111111111111,
+     "Focus": 95.95959595959596,
+     "Ties": 67.68366690152749
+    },
+    "with_ties": 74.66480123197486
+   },
+   {
+    "model": "anthropic/claude-opus-4-20250514",
+    "ours": 75.06999240599184,
+    "published": {
+     "Factuality": 82.66666666666666,
+     "Precise IF": 41.875,
+     "Math": 74.90892531876139,
+     "Safety": 89.53703703703702,
+     "Focus": 86.16161616161615,
+     "Ties": 83.7473835728655
+    },
+    "with_ties": 76.48277145949112
+   },
+   {
+    "model": "anthropic/claude-3-7-sonnet-20250219",
+    "ours": 75.05623167155423,
+    "published": {
+     "Factuality": 73.26315789473684,
+     "Precise IF": 54.37499999999999,
+     "Math": 75.0,
+     "Safety": 90.33333333333331,
+     "Focus": 92.12121212121212,
+     "Ties": 67.23333312492305
+    },
+    "with_ties": 75.3876727457009
+   },
+   {
+    "model": "infly/INF-ORM-Llama3.1-70B",
+    "ours": 74.5952864178538,
+    "published": {
+     "Factuality": 74.10526315789474,
+     "Precise IF": 41.875,
+     "Math": 69.94535519125684,
+     "Safety": 96.44444444444444,
+     "Focus": 90.30303030303031,
+     "Ties": 86.22465090242382
+    },
+    "with_ties": 76.48295733317502
+   },
+   {
+    "model": "allenai/open_instruct_dev-rm_llama_1e-6_2_skyworkstulufull__1__1743800938",
+    "ours": 73.67272727272724,
+    "published": {
+     "Factuality": 73.05263157894737,
+     "Precise IF": 40.0,
+     "Math": 66.66666666666666,
+     "Safety": 94.22222222222221,
+     "Focus": 94.14141414141413,
+     "Ties": 66.35331937360469
+    },
+    "with_ties": 72.40604233047584
+   }
+  ],
+  "first_with_ties": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+  "runner_up_with_ties": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+  "lead_with_ties": 5.7536948668637535,
+  "bound_below_top_n": 78.03913707407226,
+  "same_winner": true
+ }
+}

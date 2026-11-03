@@ -71,7 +71,7 @@ def load():
     subset = np.array(ref)
     return dict(R=R, names=names, types=types, subset=subset,
                 section=np.array([SECTION_OF[s] for s in subset]),
-                w0=official_weights(subset), hash_agree=agree,
+                w0=official_weights(subset), hash_agree=agree, hash=modal,
                 dropped=[os.path.basename(f) for f, _ in dropped])
 
 
@@ -116,4 +116,5 @@ def load_rb2():
         w0[subset == s] = 0.2 / (subset == s).sum()
     return dict(R=R, names=[r["_model"] for r in recs],
                 types=[r["_type"] for r in recs], subset=subset,
+                ids=[k[1] for k in keys],
                 section=subset, w0=w0, dropped=[])

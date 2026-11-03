@@ -1,0 +1,30 @@
+
+== RewardBench: 118 models, 2985 items
+max |official - R@w0| over all models: 4.66e-15
+leader infly/INF-ORM-Llama3.1-70B  95.11; runner-up nicolinho/QRM-Gemma-2-27B  94.44
+paper's 12 items removed, official rescoring: nicolinho/QRM-Gemma-2-27B 95.115, infly/INF-ORM-Llama3.1-70B 95.048, Skywork/Skywork-Reward-Gemma-2-27B-v0.2 94.802
+official-operator item certificate: leader safe vs any 10, 11 flip it
+  nicolinho/QRM-Gemma-2-27B                        k=11 {'mt-bench-hard': 2, 'llmbar-adver-manual': 4, 'llmbar-adver-GPTInst': 1, 'alpacaeval-length': 2, 'alpacaeval-hard': 2}  -> first after removal: nicolinho/QRM-Gemma-2-27B
+  Skywork/Skywork-Reward-Gemma-2-27B-v0.2          k=14 {'mt-bench-med': 1, 'mt-bench-hard': 4, 'llmbar-adver-manual': 3, 'llmbar-adver-GPTInst': 1, 'alpacaeval-length': 2, 'alpacaeval-hard': 2, 'alpacaeval-easy': 1}  -> first after removal: Skywork/Skywork-Reward-Gemma-2-27B-v0.2
+  Skywork/Skywork-Reward-Gemma-2-27B               k=22 {'mt-bench-med': 1, 'mt-bench-hard': 1, 'llmbar-natural': 2, 'llmbar-adver-neighbor': 6, 'llmbar-adver-manual': 4, 'llmbar-adver-GPTOut': 2, 'llmbar-adver-GPTInst': 1, 'alpacaeval-length': 2, 'alpacaeval-hard': 1, 'alpacaeval-easy': 2}  -> first after removal: nicolinho/QRM-Gemma-2-27B
+  nicolinho/QRM-Llama3.1-8B-v2                     k=33 {'mt-bench-hard': 3, 'llmbar-adver-neighbor': 10, 'llmbar-adver-manual': 6, 'llmbar-adver-GPTOut': 6, 'llmbar-adver-GPTInst': 1, 'alpacaeval-length': 2, 'alpacaeval-hard': 2, 'alpacaeval-easy': 3}  -> first after removal: nicolinho/QRM-Llama3.1-8B-v2
+  Skywork/Skywork-Reward-Llama-3.1-8B-v0.2         k=33 {'mt-bench-hard': 2, 'llmbar-natural': 2, 'llmbar-adver-neighbor': 7, 'llmbar-adver-manual': 5, 'llmbar-adver-GPTOut': 7, 'llmbar-adver-GPTInst': 1, 'alpacaeval-length': 1, 'alpacaeval-hard': 3, 'alpacaeval-easy': 5}  -> first after removal: Skywork/Skywork-Reward-Llama-3.1-8B-v0.2
+
+== RewardBench 2: 188 models, 1753 items
+max |official - R@w0| over all models: 1.61e-15
+leader Skywork/Skywork-Reward-V2-Llama-3.1-8B  84.73; runner-up Skywork/Skywork-Reward-V2-Qwen3-8B  79.50
+paper's 43 items removed, official rescoring: Skywork/Skywork-Reward-V2-Qwen3-8B 83.009, Skywork/Skywork-Reward-V2-Llama-3.1-8B 82.631, Skywork/Skywork-Reward-V2-Qwen3-4B 78.977
+official-operator item certificate: leader safe vs any 39, 40 flip it
+  Skywork/Skywork-Reward-V2-Qwen3-8B               k=40 {np.str_('Precise IF'): 35, np.str_('Math'): 5}  -> first after removal: Skywork/Skywork-Reward-V2-Qwen3-8B
+  Skywork/Skywork-Reward-V2-Qwen3-4B               k=58 {np.str_('Precise IF'): 43, np.str_('Math'): 15}  -> first after removal: Skywork/Skywork-Reward-V2-Qwen3-4B
+
+== RewardBench 2 published scores (with Ties) for our top models
+Skywork/Skywork-Reward-V2-Llama-3.1-8B           ours 84.73  with Ties 84.13
+Skywork/Skywork-Reward-V2-Qwen3-8B               ours 79.50  with Ties 78.37
+Skywork/Skywork-Reward-V2-Qwen3-4B               ours 77.16  with Ties 75.51
+Skywork/Skywork-Reward-V2-Llama-3.2-3B           ours 76.13  with Ties 74.66
+anthropic/claude-opus-4-20250514                 ours 75.07  with Ties 76.48
+anthropic/claude-3-7-sonnet-20250219             ours 75.06  with Ties 75.39
+infly/INF-ORM-Llama3.1-70B                       ours 74.60  with Ties 76.48
+allenai/open_instruct_dev-rm_llama_1e-6_2_skyworkstulufull__1__1743800938 ours 73.67  with Ties 72.41
+with Ties: first Skywork/Skywork-Reward-V2-Llama-3.1-8B, lead 5.75 over Skywork/Skywork-Reward-V2-Qwen3-8B; models below our top 8 reach at most 78.04
